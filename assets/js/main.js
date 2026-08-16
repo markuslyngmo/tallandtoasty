@@ -139,14 +139,18 @@
   /* ---------- Easter egg: 5x click the logo ---------- */
   var brand = document.querySelector(".brand");
   if (brand) {
-    var clicks = 0, clickTimer = null;
+    var brandHref = brand.getAttribute("href");
+    var clicks = 0, clickTimer = null, navTimer = null;
     brand.addEventListener("click", function (e) {
+      e.preventDefault();
       clicks++;
       clearTimeout(clickTimer);
+      clearTimeout(navTimer);
       clickTimer = setTimeout(function () { clicks = 0; }, 1500);
+
       if (clicks >= 5) {
         clicks = 0;
-        e.preventDefault();
+        clearTimeout(clickTimer);
         var mark = brand.querySelector(".brand-mark");
         if (mark) {
           mark.style.transition = "transform 0.6s ease";
@@ -158,6 +162,11 @@
         banner.textContent = "🦒 This giraffe has excellent posture. 5 clicks earned!";
         document.body.appendChild(banner);
         setTimeout(function () { banner.remove(); }, 2600);
+      } else {
+        // Give more clicks a moment to arrive before navigating home like a normal logo click.
+        navTimer = setTimeout(function () {
+          window.location.href = brandHref;
+        }, 350);
       }
     });
   }
