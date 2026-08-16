@@ -31,7 +31,7 @@ layout: default
     <h3>Blog</h3>
     <p>Mostly early morning runs, café life, and the occasional trip.</p>
     <ul class="mini-list">
-      {% for post in site.posts limit: 5 %}
+      {% for post in site.posts limit: 3 %}
         <li>
           <time>{{ post.date | date: "%d %b" }}</time>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -45,6 +45,11 @@ layout: default
     <div class="card-icon">📍</div>
     <h3>Now</h3>
     <p>What I'm up to these days &mdash; work, training, and whatever I'm currently obsessing over.</p>
+    <ul class="mini-list">
+      <li>📍 Oslo, St. Hanshaugen</li>
+      <li>☕ Running Baker Hansen Vogts gate</li>
+      <li>🏃 Zone 2 base + weekly Norwegian 4x4s</li>
+    </ul>
     <a class="card-cta" href="{{ '/now/' | relative_url }}">See what's now &rarr;</a>
   </div>
 
@@ -52,6 +57,11 @@ layout: default
     <div class="card-icon">🏋️</div>
     <h3>Training Plan</h3>
     <p>My body recomposition &amp; longevity plan, built around fasting, Zone 2 and Norwegian 4x4s.</p>
+    <ul class="mini-list">
+      <li>Mon &middot; Legs &amp; core strength</li>
+      <li>Tue &middot; Norwegian 4x4 intervals</li>
+      <li>Fri &middot; Active recovery &amp; sauna</li>
+    </ul>
     <a class="card-cta" href="{{ '/training-plan/' | relative_url }}">See the plan &rarr;</a>
   </div>
 
@@ -59,6 +69,11 @@ layout: default
     <div class="card-icon">🎒</div>
     <h3>Gear List</h3>
     <p>Nobody's asking, but here's every shoe, watch and gadget I actually use.</p>
+    <ul class="mini-list">
+      <li>⌚ Apple Watch Ultra 2</li>
+      <li>👟 Nike Zoom Fly 6</li>
+      <li>📷 Kodak Snapic A1 film camera</li>
+    </ul>
     <a class="card-cta" href="{{ '/my-gear-list/' | relative_url }}">See the gear &rarr;</a>
   </div>
 
@@ -66,6 +81,11 @@ layout: default
     <div class="card-icon">🗺️</div>
     <h3>My Oslo Guide</h3>
     <p>Saunas, spas, arcade bars and the café you should actually visit.</p>
+    <ul class="mini-list">
+      <li>🧖 Oslo Badstuforening, Sukkerbiten</li>
+      <li>☕ Baker Hansen Vogts Gate</li>
+      <li>🕹️ Tilt, Grünerløkka</li>
+    </ul>
     <a class="card-cta" href="{{ '/my-oslo-guide/' | relative_url }}">Explore Oslo &rarr;</a>
   </div>
 
@@ -74,8 +94,9 @@ layout: default
     <h3>Links</h3>
     <p>Find me elsewhere on the internet.</p>
     <ul class="mini-list">
-      <li><a href="https://www.youtube.com/@MarkusLyngmo" target="_blank" rel="noopener">YouTube</a></li>
-      <li><a href="https://www.strava.com/athletes/56752973" target="_blank" rel="noopener">Strava</a></li>
+      <li>▶️ <a href="https://www.youtube.com/@MarkusLyngmo" target="_blank" rel="noopener">YouTube</a></li>
+      <li>🏃 <a href="https://www.strava.com/athletes/56752973" target="_blank" rel="noopener">Strava</a></li>
+      <li>☕ <a href="https://maps.app.goo.gl/asKFtVdchrPNeq5p8" target="_blank" rel="noopener">The café</a></li>
     </ul>
   </div>
 </div>

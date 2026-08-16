@@ -301,7 +301,7 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
   display: flex;
   flex-direction: column;
   gap: 12px;
-  min-height: 540px;
+  min-height: 460px;
   box-shadow: 0 6px 18px var(--shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
