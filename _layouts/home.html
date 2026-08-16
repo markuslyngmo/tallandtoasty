@@ -1,0 +1,81 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="bracket-frame">
+    <span class="corner corner-tl"></span>
+    <span class="corner corner-tr"></span>
+    <span class="corner corner-bl"></span>
+    <span class="corner corner-br"></span>
+    <img class="hero-photo" src="{{ '/assets/images/blog/img_1259.jpeg' | relative_url }}" alt="Markus">
+  </div>
+  <div class="kicker">&gt; café owner &middot; runner &middot; oslo</div>
+  <h1>Markus, <span class="accent">tall and toasty</span></h1>
+  <p class="lede">
+    I live in Oslo and run my own café. When I'm not working you'll find me
+    chasing 5K PRs at Bislett Stadion, in the sauna, or eating something
+    really good.
+  </p>
+  <div class="scroll-cue">Scroll ↓</div>
+</section>
+
+<div class="section-label">// About</div>
+<article class="page-frame reveal">
+  {{ content }}
+</article>
+
+<div class="section-label">// Explore</div>
+<div class="card-grid">
+  <div class="card reveal">
+    <div class="card-icon">📝</div>
+    <h3>Blog</h3>
+    <p>Mostly early morning runs, café life, and the occasional trip.</p>
+    <ul class="mini-list">
+      {% for post in site.posts limit: 5 %}
+        <li>
+          <time>{{ post.date | date: "%d %b" }}</time>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <a class="card-cta" href="{{ '/blog/' | relative_url }}">Read the blog &rarr;</a>
+  </div>
+
+  <div class="card reveal">
+    <div class="card-icon">📍</div>
+    <h3>Now</h3>
+    <p>What I'm up to these days &mdash; work, training, and whatever I'm currently obsessing over.</p>
+    <a class="card-cta" href="{{ '/now/' | relative_url }}">See what's now &rarr;</a>
+  </div>
+
+  <div class="card reveal">
+    <div class="card-icon">🏋️</div>
+    <h3>Training Plan</h3>
+    <p>My body recomposition &amp; longevity plan, built around fasting, Zone 2 and Norwegian 4x4s.</p>
+    <a class="card-cta" href="{{ '/training-plan/' | relative_url }}">See the plan &rarr;</a>
+  </div>
+
+  <div class="card reveal">
+    <div class="card-icon">🎒</div>
+    <h3>Gear List</h3>
+    <p>Nobody's asking, but here's every shoe, watch and gadget I actually use.</p>
+    <a class="card-cta" href="{{ '/my-gear-list/' | relative_url }}">See the gear &rarr;</a>
+  </div>
+
+  <div class="card reveal">
+    <div class="card-icon">🗺️</div>
+    <h3>My Oslo Guide</h3>
+    <p>Saunas, spas, arcade bars and the café you should actually visit.</p>
+    <a class="card-cta" href="{{ '/my-oslo-guide/' | relative_url }}">Explore Oslo &rarr;</a>
+  </div>
+
+  <div class="card reveal">
+    <div class="card-icon">🔗</div>
+    <h3>Links</h3>
+    <p>Find me elsewhere on the internet.</p>
+    <ul class="mini-list">
+      <li><a href="https://www.youtube.com/@MarkusLyngmo" target="_blank" rel="noopener">YouTube</a></li>
+      <li><a href="https://www.strava.com/athletes/56752973" target="_blank" rel="noopener">Strava</a></li>
+    </ul>
+  </div>
+</div>

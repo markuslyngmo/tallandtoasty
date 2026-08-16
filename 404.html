@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Lost in the savanna"
+permalink: /404.html
+---
+<div class="notfound reveal in-view">
+  <div class="wander" id="wanderer">🦒</div>
+  <h1>404 — this giraffe wandered off the path</h1>
+  <p class="lede">There's nothing here. Click the giraffe, or just head back home.</p>
+  <p><a class="card-cta" href="{{ '/' | relative_url }}">Take me home &rarr;</a></p>
+</div>
+
+<script>
+  (function () {
+    var g = document.getElementById("wanderer");
+    var clicks = 0;
+    var facts = [
+      "Giraffes only need 5–30 minutes of sleep a day.",
+      "A giraffe's tongue is about 45–50 cm long, and blue-black.",
+      "No two giraffes have the same spot pattern — like fingerprints.",
+      "Giraffes are the tallest land animals on Earth.",
+      "A giraffe's heart weighs about 11 kg, to pump blood up that neck."
+    ];
+    g.addEventListener("click", function () {
+      clicks++;
+      g.style.animationDuration = Math.max(0.6, 4 - clicks * 0.4) + "s";
+      var fact = document.createElement("p");
+      fact.textContent = "🦒 " + facts[Math.floor(Math.random() * facts.length)];
+      fact.style.color = "var(--accent)";
+      fact.style.fontWeight = "700";
+      g.parentElement.appendChild(fact);
+    });
+  })();
+</script>

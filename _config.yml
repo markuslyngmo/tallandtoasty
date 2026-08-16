@@ -1,0 +1,47 @@
+title: "tall and toasty"
+tagline: "Markus, running a café and a running habit in Oslo"
+description: >-
+  Markus, in Oslo. I run a café, chase 5K PRs at Bislett Stadion, and write
+  about running, food, saunas and life around St. Hanshaugen.
+url: "" # set once GitHub Pages URL is known, e.g. https://username.github.io
+baseurl: "" # set to "/repo-name" only if NOT using a custom/user domain
+author: Markus
+email: konto@markuslyngmo.com
+lang: en
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: /:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
