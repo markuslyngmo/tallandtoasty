@@ -3,6 +3,7 @@ layout: post
 title: "An Unexpected Central America Trip ✈️ Part 1"
 date: 2026-02-11T17:34 +0000
 slug: an-unexpected-central-america-trip-part-1
+tags: [travel]
 ---
 I’m writing this from our hotel room on the last day of the trip.
 

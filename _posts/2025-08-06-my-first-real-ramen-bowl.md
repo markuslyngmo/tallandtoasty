@@ -3,6 +3,7 @@ layout: post
 title: "My First Real Ramen Bowl 🍜🔥"
 date: 2025-08-06T12:39 +0000
 slug: my-first-real-ramen-bowl
+tags: [food, life]
 ---
 I’ve only had ramen once before and never made it. But I gave it a shot, and honestly—I kinda fck nailed it.
 

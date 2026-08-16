@@ -3,6 +3,7 @@ layout: post
 title: "Morning 10k and a Runner's High"
 date: 2026-07-30T13:56 +0000
 slug: morning-10k-and-a-runners-high
+tags: [running]
 ---
 ![runnershigh](/assets/images/blog/img_1260.jpeg)
 

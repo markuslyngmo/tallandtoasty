@@ -3,6 +3,7 @@ layout: post
 title: "10k Run at Bislett Stadion"
 date: 2026-07-26T16:00 +0000
 slug: 10k-run-at-bislett-stadion
+tags: [running, oslo]
 ---
 ![on the track](/assets/images/blog/img_1207.jpeg)
 

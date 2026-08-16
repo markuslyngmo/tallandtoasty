@@ -3,6 +3,7 @@ layout: post
 title: "My first run club"
 date: 2026-07-23T06:57 +0000
 slug: my-first-run-club
+tags: [running, life]
 ---
 ![my running outfit](/assets/images/blog/img_1161.jpeg)
 

@@ -3,6 +3,7 @@ layout: post
 title: "Early Morning Miles at 05:20"
 date: 2026-08-04T04:26 +0000
 slug: early-morning-miles-at-0520
+tags: [running]
 ---
 ![early run](/assets/images/blog/img_1291.jpeg)
 

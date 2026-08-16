@@ -3,6 +3,7 @@ layout: post
 title: "Sauna Session!🧖🏼‍♂️"
 date: 2025-08-08T15:11 +0000
 slug: sauna-session
+tags: [sauna, life]
 ---
 Had a session at [Oslo Sauna](https://oslobadstuforening.no/) today. Love being a member. It’s not just the heat and the dips, it’s the people. Feels like a little community.
 

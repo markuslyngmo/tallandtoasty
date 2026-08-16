@@ -6,7 +6,6 @@ description: >-
 url: "https://tallandtoasty.no"
 baseurl: ""
 author: Markus
-email: konto@markuslyngmo.com
 lang: en
 
 markdown: kramdown
@@ -35,9 +34,26 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-paginate-v2
 
 feed:
   path: feed.xml
+
+jekyll-archives:
+  enabled:
+    - tags
+  layout: tag-archive
+  permalinks:
+    tag: '/tags/:name/'
+
+pagination:
+  enabled: true
+  collection: posts
+  per_page: 6
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  sort_reverse: true
 
 exclude:
   - Gemfile

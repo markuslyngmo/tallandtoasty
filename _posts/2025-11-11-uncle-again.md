@@ -3,6 +3,7 @@ layout: post
 title: "Uncle. Again."
 date: 2025-11-11T12:43 +0000
 slug: uncle-again
+tags: [life]
 ---
 I’ve become an uncle again.
 It still hits just as hard every time, a mix of joy, pride, and that reminder that life keeps moving fast.

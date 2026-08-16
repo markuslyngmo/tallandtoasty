@@ -367,6 +367,44 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
 .full-post h2 a:hover { background: none; color: var(--accent); }
 .full-post .post-meta { color: var(--text-dim); font-style: italic; margin-bottom: 1.4em; }
 
+/* ---------- Blog post cards (excerpt + thumbnail) ---------- */
+.post-card-list { display: flex; flex-direction: column; gap: 26px; margin-top: 30px; }
+.post-card {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 26px;
+  border-bottom: 1px dashed var(--line);
+}
+.post-card:last-child { border-bottom: none; padding-bottom: 0; }
+.post-card-thumb { flex-shrink: 0; border: none; padding: 0; background: none; }
+.post-card-thumb img { width: 140px; height: 140px; object-fit: cover; margin: 0; border-radius: 12px; }
+.post-card-body { flex: 1; min-width: 0; }
+.post-card-body h2 { margin: 4px 0 8px; }
+.post-card-body h2 a { border: none; background: none; padding: 0; color: var(--heading); }
+.post-card-body h2 a:hover { background: none; color: var(--accent); }
+.post-card-body .post-meta { margin-bottom: 6px; }
+.post-card-excerpt { color: var(--text-dim); margin: 8px 0; }
+
+@media (max-width: 560px) {
+  .post-card { flex-direction: column; }
+  .post-card-thumb img { width: 100%; height: 180px; }
+}
+
+/* ---------- Pagination ---------- */
+.pagination-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pagination-nav a { border: none; background: var(--bg-deep); padding: 10px 16px; border-radius: 10px; font-size: 0.9rem; }
+.pagination-nav a:hover { background: var(--accent); color: var(--bg); }
+.pagination-status { color: var(--text-dim); font-size: 0.85rem; }
+
 .blog-year { color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.85rem; margin: 40px 0 6px; }
 ul.blog-posts { list-style: none; margin: 0; padding: 0; }
 ul.blog-posts li { display: flex; gap: 18px; align-items: baseline; padding: 12px 0; border-bottom: 1px dashed var(--line); }
@@ -394,6 +432,27 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
 }
 
 .post-meta { color: var(--text-dim); font-style: italic; margin-bottom: 1.6em; }
+
+.post-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: -0.8em 0 1.6em; }
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--accent-light);
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.tag-pill:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.tag-pill .tag-count { opacity: 0.7; font-weight: 500; }
+
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.5em; }
+.tag-cloud .tag-pill { font-size: 0.95rem; padding: 8px 16px; }
 
 .post-nav {
   display: flex;
@@ -429,6 +488,41 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
 .toast-btn.toasted { background: var(--heading); color: var(--bg); }
 .toast-count { opacity: 0.8; font-weight: 500; }
 
+/* ---------- Share buttons ---------- */
+.share-row { display: flex; align-items: center; gap: 10px; margin-top: 18px; }
+.share-label { color: var(--text-dim); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--text-font-family);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.share-btn:hover, .share-btn:focus-visible { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.copy-link-btn.copied { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+/* ---------- Author box ---------- */
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  padding: 18px;
+  background: var(--bg-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.author-photo { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; margin: 0; box-shadow: none; flex-shrink: 0; }
+.author-name { font-weight: 700; color: var(--text); }
+.author-bio { margin: 2px 0 0; color: var(--text-dim); font-size: 0.92rem; }
+
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--line);
@@ -439,6 +533,7 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
   font-size: 0.9rem;
 }
 .site-footer .footer-links { display: flex; gap: 14px; justify-content: center; margin-bottom: 10px; flex-wrap: wrap; }
+.site-footer .footer-links-legal { font-size: 0.82rem; opacity: 0.7; margin-bottom: 16px; }
 .site-footer a { border: none; background: none; padding: 0; }
 .site-footer a:hover, .site-footer a:focus-visible { background: none; color: var(--heading); text-decoration: underline; }
 .footer-note { max-width: 480px; margin: 14px auto 0; font-size: 0.8rem; line-height: 1.5; opacity: 0.65; }

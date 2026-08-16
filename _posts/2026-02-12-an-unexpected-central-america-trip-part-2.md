@@ -3,6 +3,7 @@ layout: post
 title: "An Unexpected Central America Trip ✈️ Part 2"
 date: 2026-02-12T20:22 +0000
 slug: an-unexpected-central-america-trip-part-2
+tags: [travel]
 ---
 ### San José and an Unplanned Nightmare
 

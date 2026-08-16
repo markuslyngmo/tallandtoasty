@@ -3,6 +3,7 @@ layout: post
 title: "Tough 9.99K Fight"
 date: 2026-08-05T04:40 +0000
 slug: tough-9k-fight
+tags: [running]
 ---
 ![little disappointed](/assets/images/blog/img_1305.jpeg)
 

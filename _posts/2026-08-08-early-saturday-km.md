@@ -3,6 +3,7 @@ layout: post
 title: "Early Saturday KM"
 date: 2026-08-08T05:16 +0000
 slug: early-saturday-km
+tags: [running]
 ---
 Waking up before the rest of Oslo on a Saturday morning feels really nice, like really good! Since I have work at 08:00 today and a 9 to 10-hour shift getting out the door at 05:28 was totally worth it.
 

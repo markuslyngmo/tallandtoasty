@@ -60,6 +60,33 @@
     });
   }
 
+  /* ---------- Copy link button ---------- */
+  var copyBtn = document.querySelector(".copy-link-btn");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function () {
+      var url = copyBtn.getAttribute("data-url");
+      var done = function () {
+        copyBtn.classList.add("copied");
+        copyBtn.textContent = "✓";
+        setTimeout(function () {
+          copyBtn.classList.remove("copied");
+          copyBtn.textContent = "🔗";
+        }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done).catch(function () {});
+      } else {
+        var tmp = document.createElement("input");
+        tmp.value = url;
+        document.body.appendChild(tmp);
+        tmp.select();
+        document.execCommand("copy");
+        tmp.remove();
+        done();
+      }
+    });
+  }
+
   function burstConfetti(origin) {
     var rect = origin.getBoundingClientRect();
     var emojis = ["🍞", "🔥", "🧡"];

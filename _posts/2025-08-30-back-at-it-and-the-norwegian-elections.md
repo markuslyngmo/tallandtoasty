@@ -3,6 +3,7 @@ layout: post
 title: "Back at it and the norwegian elections"
 date: 2025-08-30T16:24 +0000
 slug: back-at-it-and-the-norwegian-elections
+tags: [café, life]
 ---
 Back at the store. The big task now is keeping customers coming back. That means updating the menu, adding new items, and refreshing old favorites. People want variety, so I’m testing seasonal specials and small twists that make the café worth revisiting.
 

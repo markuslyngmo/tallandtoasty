@@ -1,0 +1,50 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+pagination:
+  enabled: true
+---
+<h1>📝 Blog</h1>
+
+<p>Mostly early morning runs, café life, saunas, and the occasional trip. Browse by <a href="{{ '/tags/' | relative_url }}">topic</a>.</p>
+
+<div class="post-card-list">
+  {% for post in paginator.posts %}
+  <article class="post-card">
+    {% assign thumb = post.content | first_image %}
+    {% if thumb %}
+    <a href="{{ post.url | relative_url }}" class="post-card-thumb">
+      <img src="{{ thumb }}" alt="" loading="lazy">
+    </a>
+    {% endif %}
+    <div class="post-card-body">
+      <p class="post-meta"><time>{{ post.date | date: "%d %b, %Y" }}</time></p>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      {% if post.tags.size > 0 %}
+      <div class="post-tags">
+        {% for tag in post.tags %}
+          <a class="tag-pill" href="{{ '/tags/' | append: tag | relative_url | append: '/' }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</p>
+      <a class="card-cta" href="{{ post.url | relative_url }}">Read more &rarr;</a>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<nav class="pagination-nav">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>
+  {% else %}<span></span>{% endif %}
+
+  <span class="pagination-status">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>
+  {% else %}<span></span>{% endif %}
+</nav>
+{% endif %}

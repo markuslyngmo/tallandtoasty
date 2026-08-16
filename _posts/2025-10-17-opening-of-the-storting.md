@@ -3,6 +3,7 @@ layout: post
 title: "Opening of the Storting 🤴🏼"
 date: 2025-10-17T15:37 +0000
 slug: opening-of-the-storting
+tags: [oslo, life]
 ---
 This weekend I went to see the opening of the Storting. The King drove by in an open car, and it was pretty cool to see him up close. There was a nice mix of ceremony and everyday Oslo life, people standing along the street, taking pictures and waving.
 

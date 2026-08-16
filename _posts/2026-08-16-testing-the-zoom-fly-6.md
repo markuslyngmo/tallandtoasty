@@ -3,6 +3,7 @@ layout: post
 title: "Testing the Zoom Fly 6"
 date: 2026-08-16 09:15 +0200
 slug: testing-the-zoom-fly-6
+tags: [running, gear]
 ---
 Sunday morning, and finally a chance to actually test the new shoes properly instead of just wearing them around the shop.
 

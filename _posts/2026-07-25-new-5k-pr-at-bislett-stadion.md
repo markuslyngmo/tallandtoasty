@@ -3,6 +3,7 @@ layout: post
 title: "New 5K PR at Bislett Stadion"
 date: 2026-07-25T05:06 +0000
 slug: new-5k-pr-at-bislett-stadion
+tags: [running, oslo]
 ---
 ![selfie on track](/assets/images/blog/img_1179.webp)
 

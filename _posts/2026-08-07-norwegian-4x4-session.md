@@ -3,6 +3,7 @@ layout: post
 title: "Norwegian 4x4 Session"
 date: 2026-08-07T06:30 +0000
 slug: norwegian-4x4-session
+tags: [running]
 ---
 Yesterday I ran a Norwegian 4x4 interval. It was a really tough, but I fought my way through it and it felt great to get it done, i really have to remember that feeling. I don't have a selfie or photo for this sesh. I need to start remembering that.
 

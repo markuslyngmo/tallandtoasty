@@ -14,12 +14,36 @@ layout: default
 
   <h1>{{ page.title }}</h1>
   <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b, %Y" }}</time></p>
+  {% if page.tags.size > 0 %}
+  <div class="post-tags">
+    {% for tag in page.tags %}
+      <a class="tag-pill" href="{{ '/tags/' | append: tag | relative_url | append: '/' }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
 
   {{ content }}
 
   <button class="toast-btn" type="button" data-slug="{{ page.slug }}" data-base-count="0" aria-pressed="false">
     🍞 Toast this post <span class="toast-count">(0)</span>
   </button>
+
+  <div class="share-row">
+    <span class="share-label">Share:</span>
+    <a class="share-btn" target="_blank" rel="noopener" aria-label="Share on X/Twitter"
+       href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}">𝕏</a>
+    <a class="share-btn" target="_blank" rel="noopener" aria-label="Share on Facebook"
+       href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}">f</a>
+    <button class="share-btn copy-link-btn" type="button" aria-label="Copy link" data-url="{{ page.url | absolute_url }}">🔗</button>
+  </div>
+
+  <div class="author-box">
+    <img src="{{ '/assets/images/blog/img_1259.jpeg' | relative_url }}" alt="Markus" class="author-photo">
+    <div>
+      <div class="author-name">Written by Markus</div>
+      <p class="author-bio">Café owner and runner in Oslo. <a href="{{ '/about/' | relative_url }}">More about me &rarr;</a></p>
+    </div>
+  </div>
 
   <nav class="post-nav">
     {% if page.previous %}

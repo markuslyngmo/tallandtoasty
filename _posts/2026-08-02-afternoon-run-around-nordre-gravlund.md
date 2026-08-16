@@ -3,6 +3,7 @@ layout: post
 title: "Afternoon Run Around Nordre Gravlund"
 date: 2026-08-02T04:11 +0000
 slug: afternoon-run-around-nordre-gravlund
+tags: [running, oslo]
 ---
 No picture today but I took a selfie when I got home before my 20 minute situp sesh.
 
