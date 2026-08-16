@@ -20,3 +20,5 @@ There I met Diego, who thankfully wasn't afraid to make contact. He was really n
 I was really afraid of joining the club, but since it was a gay run club, it made it a little easier. Since I own a café, I asked the organizers if they want to end up at my café in the future, where I can sponsor some cinnamon buns and coffee.
 
 This was really fun.
+
+<div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="19421004011" data-style="standard" data-from-embed="false" data-token="Qp5LatRs9DDAEZLv44MWGNQ0I1cIyDDXaDqbpzY7db8"></div>

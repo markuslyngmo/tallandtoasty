@@ -20,3 +20,5 @@ I am finding this running thing helping me both mentally and physically. It's fu
 - **Avg Heart Rate:** 158 bpm
 - **Avg Power:** 222 W
 - **Elevation Gain:** 58 m
+
+<div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="19473708170" data-style="standard" data-from-embed="false" data-token="dg_3Dj0kTTvWOrxuTduwekp6VeK0_T6Bzb2awNtLJIw"></div>

@@ -16,3 +16,5 @@ Around the halfway mark the "runner's high" kicked in. My breathing settled, the
 - **Workout Time:** 52:52
 - **Avg Pace:** 5'12"/km
 - **Avg Heart Rate:** 142 bpm
+
+<div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="19525735097" data-style="standard" data-from-embed="false" data-token="wgP4joYP9pFIahNs_yimduWX9ZxtrZI_RvBk0X7uHhE"></div>

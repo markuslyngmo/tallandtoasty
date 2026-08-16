@@ -407,6 +407,8 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
 .post-nav a { border: none; background: var(--bg-deep); padding: 10px 16px; border-radius: 10px; font-size: 0.9rem; }
 .post-nav a:hover { background: var(--accent); color: var(--bg); }
 
+.strava-embed-placeholder { margin: 1.6em 0; }
+
 .toast-btn {
   display: inline-flex;
   align-items: center;

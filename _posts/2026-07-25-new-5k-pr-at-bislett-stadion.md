@@ -18,3 +18,5 @@ I managed to set a new personal record on the 5k today with a time of 24:24! Thi
 - **Avg Heart Rate:** 168 bpm
 - **Avg Power:** 258 W
 - **Elevation Gain:** 15 m
+
+<div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="19446467386" data-style="standard" data-from-embed="false" data-token="OJHCYH7TEPQ4zHTGAEaakx_bvm-2KsrbPvJek4XfRIQ"></div>
