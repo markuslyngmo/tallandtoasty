@@ -9,5 +9,8 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  {% if content contains 'strava-embed-placeholder' %}
+  <script src="https://strava-embeds.com/embed.js"></script>
+  {% endif %}
 </body>
 </html>
