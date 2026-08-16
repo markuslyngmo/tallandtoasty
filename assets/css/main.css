@@ -360,6 +360,13 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
 .page-frame h2:first-of-type { border-top: none; }
 
 /* ---------- Blog list ---------- */
+.full-post { margin: 3em 0; padding-bottom: 3em; border-bottom: 1px dashed var(--line); }
+.full-post:first-of-type { margin-top: 1.5em; }
+.full-post h2 { margin-top: 0; }
+.full-post h2 a { border: none; background: none; padding: 0; color: var(--heading); }
+.full-post h2 a:hover { background: none; color: var(--accent); }
+.full-post .post-meta { color: var(--text-dim); font-style: italic; margin-bottom: 1.4em; }
+
 .blog-year { color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.85rem; margin: 40px 0 6px; }
 ul.blog-posts { list-style: none; margin: 0; padding: 0; }
 ul.blog-posts li { display: flex; gap: 18px; align-items: baseline; padding: 12px 0; border-bottom: 1px dashed var(--line); }
