@@ -432,6 +432,7 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
 .site-footer .footer-links { display: flex; gap: 14px; justify-content: center; margin-bottom: 10px; flex-wrap: wrap; }
 .site-footer a { border: none; background: none; padding: 0; }
 .site-footer a:hover, .site-footer a:focus-visible { background: none; color: var(--heading); text-decoration: underline; }
+.footer-note { max-width: 480px; margin: 14px auto 0; font-size: 0.8rem; line-height: 1.5; opacity: 0.65; }
 .footer-paw { opacity: 0.35; cursor: default; font-size: 0.85rem; margin-top: 14px; transition: opacity 0.2s ease; }
 .footer-paw:hover { opacity: 1; }
 
