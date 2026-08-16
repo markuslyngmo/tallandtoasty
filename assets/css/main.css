@@ -507,6 +507,7 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
 }
 .share-btn:hover, .share-btn:focus-visible { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 .copy-link-btn.copied { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.copy-link-btn.copy-failed { background: #c0392b; color: #fff; border-color: #c0392b; }
 
 /* ---------- Author box ---------- */
 .author-box {
