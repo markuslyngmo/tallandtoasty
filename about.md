@@ -5,11 +5,11 @@ permalink: /about/
 ---
 # 🦒 About Me
 
-My name is Markus, and I've lived in Oslo for fourteen years. Three of them downtown, nine in Tøyen, two in St. Hanshaugen, as if I couldn't quite make up my mind even after I got here. Might be a habit from childhood: growing up split between Nittedal, Manila, Vestby, Dar es Salaam, and The Hague. Five places, four time zones, not a single stretch of continuous schooling. You'd think that would make someone restless. Instead I turned into the guy who knows exactly how many rolls need to come out of the oven at seven.
+My name is Markus, and I've lived in Oslo for fourteen years. Three of them downtown, nine in Tøyen, two in St. Hanshaugen, as if I couldn't quite make up my mind even after I got here. Might be a habit from childhood, growing up split between Nittedal, Manila, Vestby, Dar es Salaam, and The Hague. Five places, four time zones, not a single stretch of continuous schooling. You'd think that would make someone restless. Instead I turned into the guy who knows exactly how many rolls need to come out of the oven at seven.
 
 Because I run [Baker Hansen](https://maps.app.goo.gl/asKFtVdchrPNeq5p8) at Torshov. My husband runs a café too, so dinner conversation at our place is mostly proofing times and shift schedules. Most couples talk about vacation plans, we talk about Easter week staffing.
 
-Short version: a kid from five countries who ended up with the most beautiful man in the universe. Stop by Baker Hansen sometime, and I'll happily tell you why your pickled red onion is wrong.
+In short, a kid from five countries who ended up with the most beautiful man in the universe. Stop by Baker Hansen sometime, and I'll happily tell you why your pickled red onion is wrong.
 
 ### Beyond the counter
 
