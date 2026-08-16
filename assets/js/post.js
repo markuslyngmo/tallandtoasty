@@ -18,32 +18,45 @@
     updateProgress();
   }
 
-  /* ---------- Toast this post ---------- */
+  /* ---------- Toast this post — real shared count via abacus.jasoncameron.dev ---------- */
   var btn = document.querySelector(".toast-btn");
   if (btn) {
     var slug = btn.getAttribute("data-slug");
-    var key = "tt-toast-" + slug;
-    var toasted = localStorage.getItem(key) === "1";
-    var countKey = "tt-toast-count-" + slug;
-    var baseCount = parseInt(btn.getAttribute("data-base-count") || "0", 10);
-    var count = parseInt(localStorage.getItem(countKey) || baseCount, 10);
+    var namespace = "tallandtoasty";
+    var toastedKey = "tt-toast-" + slug;
+    var toasted = localStorage.getItem(toastedKey) === "1";
+    var count = null;
 
     function paint() {
       var countEl = btn.querySelector(".toast-count");
-      if (countEl) countEl.textContent = "(" + count + ")";
+      if (countEl) countEl.textContent = count === null ? "" : "(" + count + ")";
       btn.classList.toggle("toasted", toasted);
       btn.setAttribute("aria-pressed", toasted ? "true" : "false");
     }
     paint();
 
+    fetch("https://abacus.jasoncameron.dev/get/" + namespace + "/" + slug)
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        count = data.value || 0;
+        paint();
+      })
+      .catch(function () { /* counter service unreachable, fail quietly */ });
+
     btn.addEventListener("click", function () {
       if (toasted) return;
       toasted = true;
-      count++;
-      localStorage.setItem(key, "1");
-      localStorage.setItem(countKey, String(count));
+      localStorage.setItem(toastedKey, "1");
       paint();
       burstConfetti(btn);
+
+      fetch("https://abacus.jasoncameron.dev/hit/" + namespace + "/" + slug)
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          count = data.value;
+          paint();
+        })
+        .catch(function () { /* keep optimistic local state if the request fails */ });
     });
   }
 
