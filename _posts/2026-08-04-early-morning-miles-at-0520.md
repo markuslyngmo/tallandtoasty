@@ -4,8 +4,6 @@ title: "Early Morning Miles at 05:20"
 date: 2026-08-04T04:26 +0000
 slug: early-morning-miles-at-0520
 ---
-## Early Morning Miles at 05:20
-
 ![early run](/assets/images/blog/img_1291.jpeg)
 
 Waking up before the rest of Oslo felt a little bit strange but I had to work in the afternoon and evening today so I had to run before my coffee. The streets were completely empty except from 3-4 for other crazy running people like me. There is something special about having the whole city to ourself while everyone else is still sleeping.

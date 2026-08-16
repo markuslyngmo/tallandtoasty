@@ -4,8 +4,6 @@ title: "10k Run at Bislett Stadion"
 date: 2026-07-26T16:00 +0000
 slug: 10k-run-at-bislett-stadion
 ---
-# 10k Run at Bislett Stadion
-
 ![on the track](/assets/images/blog/img_1207.jpeg)
 
 I went for a 10k run at Bislett Stadion today. Having such a cool arena right in the neighborhood is incredible. It makes it so easy to head out and get a proper workout in.

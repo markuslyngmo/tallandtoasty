@@ -4,8 +4,6 @@ title: "Norwegian 4x4 Session"
 date: 2026-08-07T06:30 +0000
 slug: norwegian-4x4-session
 ---
-## Norwegian 4x4 Session
-
 Yesterday I ran a Norwegian 4x4 interval. It was a really tough, but I fought my way through it and it felt great to get it done, i really have to remember that feeling. I don't have a selfie or photo for this sesh. I need to start remembering that.
 
 The awesome part was the time I spent in the demanding zones. If you add up Zone 4 (10:02) and Zone 5 (05:40), I had over 15 and a half minutes of hard heart pumping. I completely smashed the main goal of 14 plus minutes of effective work! It was also great to see my progressive heart rate. It climbed exactly like it should for each interval: 154, 162, 165, and finally 169. I pushed the body gradually more, and the heart responded perfectly.

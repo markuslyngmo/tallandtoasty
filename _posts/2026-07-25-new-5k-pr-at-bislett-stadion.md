@@ -4,8 +4,6 @@ title: "New 5K PR at Bislett Stadion"
 date: 2026-07-25T05:06 +0000
 slug: new-5k-pr-at-bislett-stadion
 ---
-## New 5K PR at Bislett Stadion
-
 ![selfie on track](/assets/images/blog/img_1179.webp)
 
 I headed over to Bislett Stadion for a track workout today. The session felt tough, but it was great to get it done!

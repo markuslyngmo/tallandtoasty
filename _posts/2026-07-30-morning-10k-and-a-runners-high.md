@@ -4,8 +4,6 @@ title: "Morning 10k and a Runner's High"
 date: 2026-07-30T13:56 +0000
 slug: morning-10k-and-a-runners-high
 ---
-# Morning 10k and a Runner's High
-
 ![runnershigh](/assets/images/blog/img_1260.jpeg)
 
 I headed out for an early morning 10k run today. The air was fresh, my legs felt light, and I managed to lock into a comfortable rhythm right from the start.

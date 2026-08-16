@@ -4,8 +4,6 @@ title: "My first run club"
 date: 2026-07-23T06:57 +0000
 slug: my-first-run-club
 ---
-## My First Run Club Experience
-
 ![my running outfit](/assets/images/blog/img_1161.jpeg)
 
 Joining a run club felt intimidating. I wondered if I could keep the pace. Yesterday I laced up my running shoes and ran to the park to get started.
