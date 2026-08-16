@@ -226,8 +226,8 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
 .corner-br { bottom: 0; right: 0; border-left: none !important; border-top: none !important; }
 
 .hero-photo {
-  width: 220px;
-  height: 220px;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 14px 30px var(--shadow);
@@ -520,7 +520,7 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
   .nav-bar { flex-wrap: wrap; }
   .nav-links { order: 3; width: 100%; justify-content: center; padding-top: 6px; }
   .hero { margin-top: 36px; }
-  .hero-photo { width: 160px; height: 160px; }
+  .hero-photo { width: 220px; height: 220px; }
   .page-frame { padding: 26px 18px; }
   ul.blog-posts li { flex-direction: column; gap: 2px; }
 }
