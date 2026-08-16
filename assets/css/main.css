@@ -433,7 +433,7 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
 
 .post-meta { color: var(--text-dim); font-style: italic; margin-bottom: 1.6em; }
 
-.post-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: -0.8em 0 1.6em; }
+.post-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.6em 0 1.6em; }
 .tag-pill {
   display: inline-flex;
   align-items: center;
