@@ -57,4 +57,4 @@ layout: default
   <p style="margin-top:20px;"><a href="{{ '/blog/' | relative_url }}">&larr; Back to all posts</a></p>
 </article>
 
-<script src="{{ '/assets/js/post.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/post.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

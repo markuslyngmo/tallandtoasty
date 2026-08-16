@@ -30,4 +30,4 @@ Pour some colored sand and watch it pile up. Click and drag inside the box below
 
 *Inspired by [thisissand.com](https://thisissand.com), rebuilt savanna-style.*
 
-<script src="{{ '/assets/js/sand.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/sand.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

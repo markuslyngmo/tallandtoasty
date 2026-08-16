@@ -3,33 +3,49 @@
 
   var canvas = document.getElementById("sand-canvas");
   if (!canvas) return;
+  var wrap = canvas.parentElement;
   var ctx = canvas.getContext("2d", { alpha: false });
 
-  var COLS = 220;
-  var ROWS = 140;
-  canvas.width = COLS;
-  canvas.height = ROWS;
+  var CELL = 5; // grain size in CSS pixels
+  var ASPECT = 0.62; // canvas height / width
 
-  var BG = [26, 19, 12];
+  var BG = "rgb(26,19,12)";
   var PALETTE = [
     BG,
-    [232, 194, 122], // sand
-    [92, 58, 33],    // giraffe brown
-    [74, 124, 89],   // leaf green
-    [192, 96, 20],   // sunset orange
-    [74, 144, 192],  // sky blue
-    [244, 235, 208]  // cream
+    "rgb(232,194,122)", // sand
+    "rgb(92,58,33)",    // giraffe brown
+    "rgb(74,124,89)",   // leaf green
+    "rgb(192,96,20)",   // sunset orange
+    "rgb(74,144,192)",  // sky blue
+    "rgb(244,235,208)"  // cream
   ];
 
-  var grid = new Uint8Array(COLS * ROWS);
-  var imageData = ctx.createImageData(COLS, ROWS);
-
+  var COLS, ROWS, grid;
   var currentColor = 1;
   var brushRadius = 2;
   var pointerDown = false;
   var pointerGrid = null;
+  var lastWrapWidth = 0;
 
   function idx(x, y) { return y * COLS + x; }
+
+  function resize() {
+    var wrapWidth = Math.floor(wrap.clientWidth);
+    if (Math.abs(wrapWidth - lastWrapWidth) < 8) return;
+    lastWrapWidth = wrapWidth;
+
+    COLS = Math.max(40, Math.floor(wrapWidth / CELL));
+    ROWS = Math.max(24, Math.round(COLS * ASPECT));
+
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.style.width = (COLS * CELL) + "px";
+    canvas.style.height = (ROWS * CELL) + "px";
+    canvas.width = Math.round(COLS * CELL * dpr);
+    canvas.height = Math.round(ROWS * CELL * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    grid = new Uint8Array(COLS * ROWS);
+  }
 
   function step() {
     for (var y = ROWS - 2; y >= 0; y--) {
@@ -80,16 +96,16 @@
   }
 
   function render() {
-    var data = imageData.data;
-    for (var i = 0; i < grid.length; i++) {
-      var col = PALETTE[grid[i]] || BG;
-      var o = i * 4;
-      data[o] = col[0];
-      data[o + 1] = col[1];
-      data[o + 2] = col[2];
-      data[o + 3] = 255;
+    ctx.fillStyle = BG;
+    ctx.fillRect(0, 0, COLS * CELL, ROWS * CELL);
+    for (var y = 0; y < ROWS; y++) {
+      for (var x = 0; x < COLS; x++) {
+        var c = grid[idx(x, y)];
+        if (!c) continue;
+        ctx.fillStyle = PALETTE[c] || BG;
+        ctx.fillRect(x * CELL, y * CELL, CELL, CELL);
+      }
     }
-    ctx.putImageData(imageData, 0, 0);
   }
 
   function loop() {
@@ -98,7 +114,15 @@
     render();
     requestAnimationFrame(loop);
   }
+
+  resize();
   requestAnimationFrame(loop);
+
+  var resizeTimer = null;
+  window.addEventListener("resize", function () {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resize, 200);
+  });
 
   function getGridPos(clientX, clientY) {
     var rect = canvas.getBoundingClientRect();
