@@ -1,6 +1,16 @@
 # Add one entry per video, newest first.
 # id = the part of the YouTube URL after v= (or after youtu.be/)
 # e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ -> id: dQw4w9WgXcQ
-#
-# - id: dQw4w9WgXcQ
-#   title: "Example video title"
+
+- id: 6baxC4e1huw
+  title: "GET-Gjengen Quiz"
+- id: YRSugLy2gW4
+  title: "Roarbua - Markus"
+- id: 7eL1pUYrXus
+  title: "Markus does a cartwheel 🛒⚙️"
+- id: LdusK9ItMnY
+  title: "Chopping cucumber"
+- id: 43mD1wgSnek
+  title: "Markus making a latte"
+- id: EH4oV4uPVkI
+  title: "Hopp i havet"
