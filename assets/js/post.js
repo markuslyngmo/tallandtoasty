@@ -29,7 +29,7 @@
 
     function paint() {
       var countEl = btn.querySelector(".toast-count");
-      if (countEl) countEl.textContent = count === null ? "" : "(" + count + ")";
+      if (countEl) countEl.textContent = (count === null || count === 0) ? "" : "(" + count + ")";
       btn.classList.toggle("toasted", toasted);
       btn.setAttribute("aria-pressed", toasted ? "true" : "false");
     }
