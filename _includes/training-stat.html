@@ -1,0 +1,41 @@
+<div class="training-stat">
+  <div class="training-stat-head">
+    <span>🎯 Zone check</span>
+    <a href="{{ '/training-plan/' | relative_url }}">See the plan &rarr;</a>
+  </div>
+  <div class="training-stat-grid">
+    {% if include.zone %}
+    <div class="training-stat-item">
+      <span class="ts-label">Target</span>
+      <strong class="ts-value">{{ include.zone }}{% if include.range %} ({{ include.range }}){% endif %}</strong>
+    </div>
+    {% endif %}
+    {% if include.avg %}
+    <div class="training-stat-item">
+      <span class="ts-label">Avg HR</span>
+      <strong class="ts-value">{{ include.avg }}</strong>
+    </div>
+    {% endif %}
+    {% if include.peak %}
+    <div class="training-stat-item">
+      <span class="ts-label">Peak HR</span>
+      <strong class="ts-value">{{ include.peak }}</strong>
+    </div>
+    {% endif %}
+    {% if include.time %}
+    <div class="training-stat-item">
+      <span class="ts-label">Time in zone</span>
+      <strong class="ts-value">{{ include.time }}</strong>
+    </div>
+    {% endif %}
+    {% if include.pace %}
+    <div class="training-stat-item">
+      <span class="ts-label">Pace / intervals</span>
+      <strong class="ts-value">{{ include.pace }}</strong>
+    </div>
+    {% endif %}
+  </div>
+  {% if include.note %}
+  <p class="training-stat-note">{{ include.note }}</p>
+  {% endif %}
+</div>

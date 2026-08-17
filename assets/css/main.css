@@ -585,6 +585,30 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
   .sand-clear { margin-left: 0; }
 }
 
+/* ---------- Training stat box ---------- */
+.training-stat {
+  margin: 1.6em 0;
+  padding: 16px 20px;
+  background: var(--bg-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.training-stat-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 12px;
+}
+.training-stat-head a { border: none; background: none; padding: 0; font-size: 0.85rem; font-weight: 700; }
+.training-stat-head a:hover { background: none; color: var(--accent); }
+.training-stat-grid { display: flex; flex-wrap: wrap; gap: 14px 28px; }
+.training-stat-item { display: flex; flex-direction: column; gap: 2px; }
+.ts-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-dim); }
+.ts-value { font-size: 1rem; color: var(--text); }
+.training-stat-note { margin: 12px 0 0; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--text-dim); font-size: 0.9rem; }
+
 /* ---------- Author box ---------- */
 .author-box {
   display: flex;
