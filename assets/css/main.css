@@ -376,8 +376,10 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
   border-bottom: 1px dashed var(--line);
 }
 .post-card:last-child { border-bottom: none; padding-bottom: 0; }
-.post-card-thumb { flex-shrink: 0; border: none; padding: 0; background: none; }
-.post-card-thumb img { width: 140px; height: 140px; object-fit: cover; margin: 0; border-radius: 12px; }
+.post-card-thumb { flex-shrink: 0; border: none; padding: 0; background: none; display: block; }
+.post-card-thumb:hover, .post-card-thumb:focus-visible { background: none; }
+.post-card-thumb img { width: 140px; height: 140px; object-fit: cover; margin: 0; border-radius: 12px; transition: transform 0.15s ease; }
+.post-card-thumb:hover img, .post-card-thumb:focus-visible img { transform: scale(1.04); }
 .post-card-body { flex: 1; min-width: 0; }
 .post-card-body h2 { margin: 4px 0 8px; }
 .post-card-body h2 a { border: none; background: none; padding: 0; color: var(--heading); }
