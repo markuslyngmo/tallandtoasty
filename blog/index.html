@@ -9,6 +9,22 @@ pagination:
 
 <p>Mostly early morning runs, café life, saunas, and the occasional trip. Browse by <a href="{{ '/tags/' | relative_url }}">topic</a>.</p>
 
+<div class="most-toasted">
+  <h2>🔥 Most Toasted</h2>
+  <p>Every post has a <strong>🍞 Toast this post</strong> button at the bottom &mdash; it's basically a one-click "I liked this," no account or comment needed. Here's what's been toasted the most.</p>
+  <ol class="toast-leaderboard" id="toast-leaderboard">
+    <li class="toast-leaderboard-status">Loading toast counts&hellip;</li>
+  </ol>
+</div>
+
+<script>
+  window.ttPosts = [
+    {% for post in site.posts %}
+    {"slug": {{ post.slug | jsonify }}, "title": {{ post.title | jsonify }}, "url": {{ post.url | relative_url | jsonify }}}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+</script>
+
 <div class="post-card-list">
   {% for post in paginator.posts %}
   <article class="post-card">
@@ -48,3 +64,5 @@ pagination:
   {% else %}<span></span>{% endif %}
 </nav>
 {% endif %}
+
+<script src="{{ '/assets/js/toast-leaderboard.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

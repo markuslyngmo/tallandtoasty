@@ -359,6 +359,25 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
 .page-frame h2 { margin-top: 2em; padding-top: 0.4em; border-top: 1px dashed var(--line); }
 .page-frame h2:first-of-type { border-top: none; }
 
+/* ---------- Most Toasted leaderboard ---------- */
+.most-toasted {
+  margin: 26px 0 6px;
+  padding: 18px 22px;
+  background: var(--bg-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.most-toasted h2 { margin: 0 0 6px; padding: 0; border: none; font-size: 1.2rem; }
+.most-toasted > p { margin: 0; color: var(--text-dim); font-size: 0.9rem; }
+.toast-leaderboard { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; }
+.toast-leaderboard-item { display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px dashed var(--line); }
+.toast-leaderboard-item:last-child { border-bottom: none; }
+.tl-rank { font-weight: 800; width: 26px; text-align: center; flex-shrink: 0; }
+.tl-title { flex: 1; min-width: 0; font-weight: 700; color: var(--heading); border: none; background: none; padding: 0; }
+.tl-title:hover { background: none; color: var(--accent); }
+.tl-count { color: var(--text-dim); font-size: 0.85rem; white-space: nowrap; flex-shrink: 0; }
+.toast-leaderboard-status { color: var(--text-dim); font-style: italic; padding: 8px 0; }
+
 /* ---------- Blog list ---------- */
 .full-post { margin: 3em 0; padding-bottom: 3em; border-bottom: 1px dashed var(--line); }
 .full-post:first-of-type { margin-top: 1.5em; }
