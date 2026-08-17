@@ -1,0 +1,53 @@
+# One point per running post. lat/lng come from the real Strava start
+# point of that run. Add a new entry (with a real lat/lng) whenever a
+# new running post goes up, including travel runs in other cities.
+- lat: 59.92764
+  lng: 10.699411
+  title: "My first run club"
+  location: "Frognerparken, Oslo"
+  url: /my-first-run-club/
+- lat: 59.925567
+  lng: 10.733649
+  title: "New 5K PR at Bislett Stadion"
+  location: "Bislett Stadion, Oslo"
+  url: /new-5k-pr-at-bislett-stadion/
+- lat: 59.925706
+  lng: 10.733493
+  title: "10k Run at Bislett Stadion"
+  location: "Bislett Stadion, Oslo"
+  url: /10k-run-at-bislett-stadion/
+- lat: 59.925685
+  lng: 10.733554
+  title: "Morning 10k and a Runner's High"
+  location: "Bislett Stadion, Oslo"
+  url: /morning-10k-and-a-runners-high/
+- lat: 59.937144
+  lng: 10.748364
+  title: "Afternoon Run Around Nordre Gravlund"
+  location: "Nordre Gravlund, Oslo"
+  url: /afternoon-run-around-nordre-gravlund/
+- lat: 59.928726
+  lng: 10.738411
+  title: "Early Morning Miles at 05:20"
+  location: "St. Hanshaugen, Oslo"
+  url: /early-morning-miles-at-0520/
+- lat: 59.925723
+  lng: 10.733414
+  title: "Tough 9.99K Fight"
+  location: "Bislett Stadion, Oslo"
+  url: /tough-9k-fight/
+- lat: 59.932459
+  lng: 10.741684
+  title: "Early Saturday KM"
+  location: "St. Hanshaugen, Oslo"
+  url: /early-saturday-km/
+- lat: 59.932462
+  lng: 10.741685
+  title: "5 AM Run"
+  location: "St. Hanshaugen, Oslo"
+  url: /5-am-run/
+- lat: 59.925567
+  lng: 10.733649
+  title: "Testing the Zoom Fly 6"
+  location: "Bislett Stadion, Oslo"
+  url: /testing-the-zoom-fly-6/
