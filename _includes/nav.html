@@ -7,10 +7,6 @@
       <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a></li>
       <li><a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} class="active"{% endif %}>About</a></li>
       <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog' or page.layout == 'post' %} class="active"{% endif %}>Blog</a></li>
-      <li><a href="{{ '/now/' | relative_url }}"{% if page.url == '/now/' %} class="active"{% endif %}>Now</a></li>
-      <li><a href="{{ '/training-plan/' | relative_url }}"{% if page.url == '/training-plan/' %} class="active"{% endif %}>Training Plan</a></li>
-      <li><a href="{{ '/my-gear-list/' | relative_url }}"{% if page.url == '/my-gear-list/' %} class="active"{% endif %}>Gear List</a></li>
-      <li><a href="{{ '/my-oslo-guide/' | relative_url }}"{% if page.url == '/my-oslo-guide/' %} class="active"{% endif %}>Oslo Guide</a></li>
     </ul>
     <button class="theme-toggle" type="button" aria-label="Toggle dark mode">☀️ Day</button>
   </div>
