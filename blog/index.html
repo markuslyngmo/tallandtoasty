@@ -2,8 +2,6 @@
 layout: page
 title: Blog
 permalink: /blog/
-pagination:
-  enabled: true
 ---
 <h1>📝 Blog</h1>
 
@@ -26,7 +24,7 @@ pagination:
 </script>
 
 <div class="post-card-list">
-  {% for post in paginator.posts %}
+  {% for post in site.posts limit: 6 %}
   <article class="post-card">
     {% assign thumb = post.content | first_image %}
     {% if thumb %}
@@ -51,18 +49,23 @@ pagination:
   {% endfor %}
 </div>
 
-{% if paginator.total_pages > 1 %}
-<nav class="pagination-nav">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>
-  {% else %}<span></span>{% endif %}
-
-  <span class="pagination-status">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>
-  {% else %}<span></span>{% endif %}
-</nav>
+{% assign remaining_count = site.posts.size | minus: 6 %}
+{% assign remaining_posts = site.posts | slice: 6, remaining_count %}
+{% if remaining_posts.size > 0 %}
+{% assign year_groups = remaining_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+<div class="year-archive">
+  {% for year in year_groups %}
+  <h2>{{ year.name }}</h2>
+  <ul class="year-post-list">
+    {% for post in year.items %}
+    <li>
+      <time>{{ post.date | date: "%d %b" }}</time>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>
 {% endif %}
 
 <script src="{{ '/assets/js/toast-leaderboard.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

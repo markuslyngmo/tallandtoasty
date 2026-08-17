@@ -411,6 +411,14 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
   .post-card-thumb img { width: 100%; height: 180px; }
 }
 
+/* ---------- Year archive ---------- */
+.year-post-list { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.year-post-list li { display: flex; gap: 12px; align-items: baseline; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+.year-post-list li:last-child { border-bottom: none; }
+.year-post-list time { color: var(--text-dim); font-size: 0.85rem; min-width: 60px; flex-shrink: 0; }
+.year-post-list a { border: none; background: none; padding: 0; color: var(--text); font-weight: 600; }
+.year-post-list a:hover { color: var(--accent); background: none; }
+
 /* ---------- Pagination ---------- */
 .pagination-nav {
   display: flex;
