@@ -50,14 +50,25 @@ layout: default
   <div class="card reveal">
     <div class="card-icon">🏁</div>
     <h3>5K PR History</h3>
-    <p>Chasing a faster 5K at Bislett Stadion, one attempt at a time.</p>
-    <ul class="mini-list">
-      <!-- Add a new <li> here each time a new 5K PR is set, newest first -->
-      <li>
-        <time>25 Jul 2026</time>
-        <a href="{{ '/new-5k-pr-at-bislett-stadion/' | relative_url }}">24:24 &mdash; New 5K PR at Bislett Stadion</a>
+    <p>Every 5K effort at Bislett Stadion, ranked fastest to slowest &mdash; full attempts and splits from longer runs.</p>
+    <!-- Ranked by fastest continuous 5K (Strava best-effort). Add new rows and re-sort as new attempts happen. -->
+    <ol class="toast-leaderboard">
+      <li class="toast-leaderboard-item">
+        <span class="tl-rank">🥇</span>
+        <a class="tl-title" href="{{ '/new-5k-pr-at-bislett-stadion/' | relative_url }}">22:50 &mdash; New 5K PR at Bislett Stadion</a>
+        <span class="tl-count">24 Jul 2026</span>
       </li>
-    </ul>
+      <li class="toast-leaderboard-item">
+        <span class="tl-rank">🥈</span>
+        <a class="tl-title" href="{{ '/tough-9k-fight/' | relative_url }}">23:21 &mdash; Tough 9.99K Fight (split)</a>
+        <span class="tl-count">4 Aug 2026</span>
+      </li>
+      <li class="toast-leaderboard-item">
+        <span class="tl-rank">🥉</span>
+        <a class="tl-title" href="{{ '/10k-run-at-bislett-stadion/' | relative_url }}">25:40 &mdash; 10k Run at Bislett Stadion (split)</a>
+        <span class="tl-count">26 Jul 2026</span>
+      </li>
+    </ol>
     <a class="card-cta" href="{{ '/tags/running/' | relative_url }}">See all running posts &rarr;</a>
   </div>
 
