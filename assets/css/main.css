@@ -411,6 +411,43 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
   .post-card-thumb img { width: 100%; height: 180px; }
 }
 
+/* ---------- Video grid ---------- */
+.video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin-top: 24px; }
+.video-card { display: flex; flex-direction: column; gap: 8px; }
+.video-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background-color: var(--bg-deep);
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  overflow: hidden;
+}
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.video-thumb:hover .video-play-btn, .video-thumb:focus-visible .video-play-btn { background: var(--heading); transform: translate(-50%, -50%) scale(1.08); }
+.video-title { margin: 0; font-weight: 600; font-size: 0.95rem; color: var(--text); }
+.video-iframe { width: 100%; aspect-ratio: 16 / 9; border: none; border-radius: var(--radius); }
+.video-empty { color: var(--text-dim); font-style: italic; }
+
 /* ---------- Year archive ---------- */
 .year-post-list { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
 .year-post-list li { display: flex; gap: 12px; align-items: baseline; padding: 8px 0; border-bottom: 1px dashed var(--line); }
