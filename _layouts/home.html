@@ -38,6 +38,12 @@ layout: default
         </li>
       {% endfor %}
     </ul>
+    <div class="post-tags card-tags">
+      {% assign sorted_tags = site.tags | sort %}
+      {% for tag in sorted_tags %}
+        <a class="tag-pill" href="{{ '/tags/' | append: tag[0] | relative_url | append: '/' }}">{{ tag[0] }}</a>
+      {% endfor %}
+    </div>
     <a class="card-cta" href="{{ '/blog/' | relative_url }}">Read the blog &rarr;</a>
   </div>
 
