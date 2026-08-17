@@ -124,6 +124,11 @@ layout: default
     <div class="card-icon">🎥</div>
     <h3>Videos</h3>
     <p>Running clips, café life, and whatever else ends up on camera.</p>
+    <ul class="mini-list">
+      {% for video in site.data.videos limit: 3 %}
+        <li>▶️ <a href="https://www.youtube.com/watch?v={{ video.id }}" target="_blank" rel="noopener">{{ video.title }}</a></li>
+      {% endfor %}
+    </ul>
     <a class="card-cta" href="{{ '/videos/' | relative_url }}">Watch on the site &rarr;</a>
   </div>
 
