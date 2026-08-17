@@ -4,6 +4,7 @@ title: "New 5K PR at Bislett Stadion"
 date: 2026-07-25T05:06 +0000
 slug: new-5k-pr-at-bislett-stadion
 tags: [running, oslo]
+description: "A track session at Bislett Stadion ends in a new 5K personal record: 24:24, averaging 168 bpm — the new baseline to build on."
 ---
 ![selfie on track](/assets/images/blog/img_1179.webp)
 

@@ -4,6 +4,7 @@ title: "My first run club"
 date: 2026-07-23T06:57 +0000
 slug: my-first-run-club
 tags: [running, life]
+description: "Joining a gay run club in Oslo felt intimidating — until a 5.91km run through Frognerparken to Huk with new friend Diego turned out to be a blast."
 ---
 ![my running outfit](/assets/images/blog/img_1161.jpeg)
 

@@ -4,6 +4,7 @@ title: "Morning 10k and a Runner's High"
 date: 2026-07-30T13:56 +0000
 slug: morning-10k-and-a-runners-high
 tags: [running]
+description: "An early 10K where the runner's high kicks in at halfway — legs light, breathing easy, finishing strong in 52:52."
 ---
 ![runnershigh](/assets/images/blog/img_1260.jpeg)
 

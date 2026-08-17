@@ -4,6 +4,7 @@ title: "Tough 9.99K Fight"
 date: 2026-08-05T04:40 +0000
 slug: tough-9k-fight
 tags: [running]
+description: "A heavy, grinding run that should've been 10K — GPS recalculates to 9.99km, but pushing through the whole way still counts as a PB."
 ---
 ![little disappointed](/assets/images/blog/img_1305.jpeg)
 
