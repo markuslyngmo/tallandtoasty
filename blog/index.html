@@ -31,6 +31,27 @@ permalink: /blog/
     <a href="{{ post.url | relative_url }}" class="post-card-thumb">
       <img src="{{ thumb }}" alt="" loading="lazy">
     </a>
+    {% else %}
+      {% if post.tags contains "running" %}
+        {% assign fb_tag = "running" %}{% assign fb_emoji = "🏃" %}
+      {% elsif post.tags contains "café" %}
+        {% assign fb_tag = "cafe" %}{% assign fb_emoji = "☕" %}
+      {% elsif post.tags contains "food" %}
+        {% assign fb_tag = "food" %}{% assign fb_emoji = "🍜" %}
+      {% elsif post.tags contains "gear" %}
+        {% assign fb_tag = "gear" %}{% assign fb_emoji = "🎒" %}
+      {% elsif post.tags contains "oslo" %}
+        {% assign fb_tag = "oslo" %}{% assign fb_emoji = "🏙️" %}
+      {% elsif post.tags contains "sauna" %}
+        {% assign fb_tag = "sauna" %}{% assign fb_emoji = "🧖" %}
+      {% elsif post.tags contains "travel" %}
+        {% assign fb_tag = "travel" %}{% assign fb_emoji = "✈️" %}
+      {% else %}
+        {% assign fb_tag = "life" %}{% assign fb_emoji = "📷" %}
+      {% endif %}
+    <a href="{{ post.url | relative_url }}" class="post-card-thumb post-card-thumb-fallback tag-{{ fb_tag }}">
+      <span>{{ fb_emoji }}</span>
+    </a>
     {% endif %}
     <div class="post-card-body">
       <p class="post-meta"><time>{{ post.date | date: "%d %b, %Y" }}</time></p>

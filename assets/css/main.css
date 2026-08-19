@@ -401,6 +401,26 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
 .post-card-thumb:hover, .post-card-thumb:focus-visible { background: none; }
 .post-card-thumb img { width: 140px; height: 140px; object-fit: cover; margin: 0; border-radius: 12px; transition: transform 0.15s ease; }
 .post-card-thumb:hover img, .post-card-thumb:focus-visible img { transform: scale(1.04); }
+
+.post-card-thumb-fallback {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: transform 0.15s ease;
+}
+.post-card-thumb-fallback span { font-size: 3rem; line-height: 1; transform: translateY(-2px); }
+.post-card-thumb-fallback:hover, .post-card-thumb-fallback:focus-visible { transform: scale(1.04); }
+.post-card-thumb-fallback.tag-running { background: rgba(192, 96, 20, 0.18); }
+.post-card-thumb-fallback.tag-cafe { background: rgba(92, 58, 33, 0.18); }
+.post-card-thumb-fallback.tag-food { background: rgba(192, 96, 20, 0.3); }
+.post-card-thumb-fallback.tag-gear { background: rgba(74, 124, 89, 0.22); }
+.post-card-thumb-fallback.tag-oslo { background: rgba(74, 124, 89, 0.34); }
+.post-card-thumb-fallback.tag-sauna { background: rgba(192, 96, 20, 0.4); }
+.post-card-thumb-fallback.tag-travel { background: rgba(74, 144, 192, 0.26); }
+.post-card-thumb-fallback.tag-life { background: rgba(92, 58, 33, 0.1); }
 .post-card-body { flex: 1; min-width: 0; }
 .post-card-body h2 { margin: 4px 0 8px; }
 .post-card-body h2 a { border: none; background: none; padding: 0; color: var(--heading); }
@@ -411,6 +431,8 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
 @media (max-width: 560px) {
   .post-card { flex-direction: column; }
   .post-card-thumb img { width: 100%; height: 180px; }
+  .post-card-thumb-fallback { width: 100%; height: 180px; }
+  .post-card-thumb-fallback span { font-size: 3.6rem; }
 }
 
 /* ---------- Run map ---------- */
