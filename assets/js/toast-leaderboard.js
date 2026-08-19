@@ -1,19 +1,13 @@
 (function () {
   "use strict";
 
+  var section = document.getElementById("most-toasted");
   var list = document.getElementById("toast-leaderboard");
   var posts = window.ttPosts;
-  if (!list || !posts || !posts.length) return;
+  if (!section || !list || !posts || !posts.length) return;
 
   var namespace = "tallandtoasty";
-
-  function setStatus(text) {
-    list.innerHTML = "";
-    var li = document.createElement("li");
-    li.className = "toast-leaderboard-status";
-    li.textContent = text;
-    list.appendChild(li);
-  }
+  var MIN_TOP_COUNT = 5;
 
   Promise.all(
     posts.map(function (post) {
@@ -27,11 +21,11 @@
     toasted.sort(function (a, b) { return b.count - a.count; });
     var top = toasted.slice(0, 5);
 
-    if (!top.length) {
-      setStatus("Nobody's toasted a post yet — be the first!");
+    if (!top.length || top[0].count < MIN_TOP_COUNT) {
       return;
     }
 
+    section.hidden = false;
     list.innerHTML = "";
     var medals = ["🥇", "🥈", "🥉"];
 
@@ -58,6 +52,6 @@
       list.appendChild(li);
     });
   }).catch(function () {
-    setStatus("Couldn't load toast counts right now.");
+    /* leave the section hidden if counts can't be loaded */
   });
 })();

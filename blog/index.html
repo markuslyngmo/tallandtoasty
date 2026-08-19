@@ -7,12 +7,10 @@ permalink: /blog/
 
 <p>Mostly early morning runs, café life, saunas, and the occasional trip. Browse by <a href="{{ '/tags/' | relative_url }}">topic</a>.</p>
 
-<div class="most-toasted">
+<div class="most-toasted" id="most-toasted" hidden>
   <h2>🔥 Most Toasted</h2>
   <p>Every post has a <strong>🍞 Toast this post</strong> button at the bottom &mdash; it's basically a one-click "I liked this," no account or comment needed. Here's what's been toasted the most.</p>
-  <ol class="toast-leaderboard" id="toast-leaderboard">
-    <li class="toast-leaderboard-status">Loading toast counts&hellip;</li>
-  </ol>
+  <ol class="toast-leaderboard" id="toast-leaderboard"></ol>
 </div>
 
 <script>
