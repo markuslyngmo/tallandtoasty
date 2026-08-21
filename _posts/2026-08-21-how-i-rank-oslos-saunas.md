@@ -4,7 +4,7 @@ title: "How I Rank Oslo's Saunas (Spoiler: It Changes)"
 date: 2026-08-21
 slug: how-i-rank-oslos-saunas
 tags: [sauna, oslo]
-description: "Jeg har prøvd nok badstuer i Oslo til å ha en sterk mening om rangeringen."
+description: "I've tried enough saunas in Oslo to have a strong opinion on the ranking."
 ---
 
 I used to hate walking into a sauna and feeling awful after 3 minutes. I honestly had never tried a sauna when I was younger, I think maybe the first time was with my friends on a cabin trip, and maybe that's why I didn't see why people liked it. But something changed 3-4 years ago when Badstueforeningen in Oslo got more and more saunas.
