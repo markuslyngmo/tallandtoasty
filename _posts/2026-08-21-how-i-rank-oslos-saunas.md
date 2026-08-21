@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How I Rank Oslo's Saunas (Spoiler: It Changes)
+title: "How I Rank Oslo's Saunas (Spoiler: It Changes)"
 date: 2026-08-21
 slug: how-i-rank-oslos-saunas
 tags: [sauna, oslo]
