@@ -61,7 +61,7 @@ permalink: /blog/
         {% endfor %}
       </div>
       {% endif %}
-      <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</p>
+      <p class="post-card-excerpt">{{ post.description | default: post.excerpt | strip_html | truncatewords: 32 }}</p>
       <a class="card-cta" href="{{ post.url | relative_url }}">Read more &rarr;</a>
     </div>
   </article>
