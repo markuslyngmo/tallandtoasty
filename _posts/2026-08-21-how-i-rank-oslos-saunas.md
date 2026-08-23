@@ -32,30 +32,36 @@ Saunas have kinda put Oslo on the map or maybe Oslo has become more popular beca
 How do you really rate a 5x5 wooden heat box? Is it the average temperature (is it usually incredibly hot or lukewarm)? Is it the culture surrounding the place? Or is it just if the vibe is good then it's the best? I don't know and I have different rankings based on time of year, how I feel and time of the week so I am going to make a list based on those terms. I think that a sauna experience can be a lot of different things so maybe go to a couple before you choose your favourite. I have to admit I haven't been to Mad Goats yet. As soon as I visit, I'll update the list if it makes the cut.
 
 ### Time of season list
+
 #### Winter
 1. Sagene Folkebad
 2. Sukkerbiten
 3. Vestkant Badet
+
 #### Summer
 1. Sukkerbiten
 2. Salt Sauna
 3. Langkaia
 
 ### Time of the week
+
 #### Weekdays
 1. Sukkerbiten
 2. Langkaia
 3. Sagene Folkebad
+
 #### Weekends
 1. Salt Sauna
 2. Sukkerbiten
 3. Kroloftet
 
 ### How I feel
+
 #### Extrovert
 1. Sukkerbiten
 2. Kroloftet
 3. Salt Sauna
+
 #### Introvert
 1. Sagene Folkebad
 2. Vestkant Badet
