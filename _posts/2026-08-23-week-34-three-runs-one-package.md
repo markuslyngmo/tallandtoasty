@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Week 34 Three Runs One Package
+title: "Week 34 Three Runs One Package"
 date: 2026-08-23
 slug: week-34-three-runs-one-package
 tags: [running]
