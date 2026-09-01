@@ -136,6 +136,57 @@
     "font-size:12px;color:#C06014;"
   );
 
+  /* ---------- Link click sound ---------- */
+  var audioCtx = null;
+  function playClickSound() {
+    try {
+      var Ctx = window.AudioContext || window.webkitAudioContext;
+      if (!Ctx) return;
+      if (!audioCtx) audioCtx = new Ctx();
+      if (audioCtx.state === "suspended") audioCtx.resume();
+
+      var now = audioCtx.currentTime;
+      var osc = audioCtx.createOscillator();
+      var gain = audioCtx.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(720, now);
+      osc.frequency.exponentialRampToValueAtTime(320, now + 0.08);
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.exponentialRampToValueAtTime(0.09, now + 0.008);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.09);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(now);
+      osc.stop(now + 0.1);
+    } catch (e) { /* ignore */ }
+  }
+
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest && e.target.closest("a[href]");
+    if (!link || e.defaultPrevented) return;
+
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+      playClickSound();
+      return;
+    }
+
+    var href = link.getAttribute("href");
+    if (!href || href.charAt(0) === "#") {
+      playClickSound();
+      return;
+    }
+    if (link.target === "_blank" || link.hasAttribute("download") || href.indexOf("mailto:") === 0 || href.indexOf("tel:") === 0) {
+      playClickSound();
+      return;
+    }
+
+    // Same-tab navigation: play the sound, then give it a beat to be heard before leaving the page.
+    e.preventDefault();
+    playClickSound();
+    var dest = link.href;
+    setTimeout(function () { window.location.href = dest; }, 110);
+  });
+
   /* ---------- Easter egg: 5x click the logo ---------- */
   var brand = document.querySelector(".brand");
   if (brand) {
