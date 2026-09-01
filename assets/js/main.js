@@ -25,6 +25,7 @@
       root.setAttribute("data-theme", next);
       localStorage.setItem("tt-theme", next);
       paintToggle();
+      playSound("switch");
     });
   }
 
@@ -136,9 +137,83 @@
     "font-size:12px;color:#C06014;"
   );
 
-  /* ---------- Link click sound ---------- */
+  /* ---------- Sound engine (synthesized, no audio files) ---------- */
   var soundToggle = document.querySelector(".sound-toggle");
   var soundMuted = localStorage.getItem("tt-sound") === "off";
+  var audioCtx = null;
+
+  function ensureAudioCtx() {
+    var Ctx = window.AudioContext || window.webkitAudioContext;
+    if (!Ctx) return null;
+    if (!audioCtx) audioCtx = new Ctx();
+    if (audioCtx.state === "suspended") audioCtx.resume();
+    return audioCtx;
+  }
+
+  function tone(ctx, t, freqFrom, freqTo, gainPeak, duration) {
+    var osc = ctx.createOscillator();
+    var gain = ctx.createGain();
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(freqFrom, t);
+    osc.frequency.exponentialRampToValueAtTime(freqTo, t + duration * 0.8);
+    gain.gain.setValueAtTime(0.0001, t);
+    gain.gain.exponentialRampToValueAtTime(gainPeak, t + duration * 0.12);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + duration + 0.02);
+  }
+
+  function noiseClick(ctx, t, freq, gainPeak, duration) {
+    var size = Math.max(1, Math.floor(ctx.sampleRate * duration));
+    var buffer = ctx.createBuffer(1, size, ctx.sampleRate);
+    var data = buffer.getChannelData(0);
+    for (var i = 0; i < size; i++) data[i] = Math.random() * 2 - 1;
+    var noise = ctx.createBufferSource();
+    noise.buffer = buffer;
+    var filter = ctx.createBiquadFilter();
+    filter.type = "bandpass";
+    filter.frequency.value = freq;
+    filter.Q.value = 1.1;
+    var gain = ctx.createGain();
+    gain.gain.setValueAtTime(gainPeak, t);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+    noise.connect(filter);
+    filter.connect(gain);
+    gain.connect(ctx.destination);
+    noise.start(t);
+    noise.stop(t + duration + 0.01);
+  }
+
+  // Plays regardless of the mute setting — used only for the sound toggle's own feedback.
+  function playRaw(kind) {
+    var ctx = ensureAudioCtx();
+    if (!ctx) return;
+    try {
+      var t = ctx.currentTime;
+      if (kind === "click") {
+        tone(ctx, t, 720, 320, 0.09, 0.09);
+      } else if (kind === "search") {
+        tone(ctx, t, 520, 900, 0.08, 0.09);
+      } else if (kind === "toggle-on") {
+        tone(ctx, t, 500, 780, 0.08, 0.07);
+        tone(ctx, t + 0.06, 780, 1040, 0.07, 0.07);
+      } else if (kind === "toggle-off") {
+        tone(ctx, t, 420, 220, 0.07, 0.09);
+      } else if (kind === "switch") {
+        // A light switch flick: a sharp click, then a slightly duller settle.
+        noiseClick(ctx, t, 1500, 0.12, 0.014);
+        noiseClick(ctx, t + 0.05, 850, 0.1, 0.022);
+      }
+    } catch (e) { /* ignore */ }
+  }
+
+  function playSound(kind) {
+    if (soundMuted) return;
+    playRaw(kind);
+  }
+  window.ttPlaySound = playSound;
 
   function paintSoundToggle() {
     if (!soundToggle) return;
@@ -150,35 +225,13 @@
 
   if (soundToggle) {
     soundToggle.addEventListener("click", function () {
+      var turningOn = soundMuted;
       soundMuted = !soundMuted;
       localStorage.setItem("tt-sound", soundMuted ? "off" : "on");
       paintSoundToggle();
+      // Always audible, even when muting — it's the direct confirmation for this button.
+      playRaw(turningOn ? "toggle-on" : "toggle-off");
     });
-  }
-
-  var audioCtx = null;
-  function playClickSound() {
-    if (soundMuted) return;
-    try {
-      var Ctx = window.AudioContext || window.webkitAudioContext;
-      if (!Ctx) return;
-      if (!audioCtx) audioCtx = new Ctx();
-      if (audioCtx.state === "suspended") audioCtx.resume();
-
-      var now = audioCtx.currentTime;
-      var osc = audioCtx.createOscillator();
-      var gain = audioCtx.createGain();
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(720, now);
-      osc.frequency.exponentialRampToValueAtTime(320, now + 0.08);
-      gain.gain.setValueAtTime(0.0001, now);
-      gain.gain.exponentialRampToValueAtTime(0.09, now + 0.008);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.09);
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-      osc.start(now);
-      osc.stop(now + 0.1);
-    } catch (e) { /* ignore */ }
   }
 
   document.addEventListener("click", function (e) {
@@ -187,23 +240,23 @@
     if (!link || e.defaultPrevented) return;
 
     if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
-      playClickSound();
+      playSound("click");
       return;
     }
 
     var href = link.getAttribute("href");
     if (!href || href.charAt(0) === "#") {
-      playClickSound();
+      playSound("click");
       return;
     }
     if (link.target === "_blank" || link.hasAttribute("download") || href.indexOf("mailto:") === 0 || href.indexOf("tel:") === 0) {
-      playClickSound();
+      playSound("click");
       return;
     }
 
     // Same-tab navigation: play the sound, then give it a beat to be heard before leaving the page.
     e.preventDefault();
-    playClickSound();
+    playSound("click");
     var dest = link.href;
     setTimeout(function () { window.location.href = dest; }, 110);
   });
