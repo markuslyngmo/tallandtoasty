@@ -35,6 +35,7 @@
     document.body.classList.add("search-open-lock");
     loadPosts(function () {});
     input.focus();
+    if (window.ttPlaySound) window.ttPlaySound("search");
   }
 
   function closeSearch() {
