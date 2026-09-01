@@ -137,8 +137,28 @@
   );
 
   /* ---------- Link click sound ---------- */
+  var soundToggle = document.querySelector(".sound-toggle");
+  var soundMuted = localStorage.getItem("tt-sound") === "off";
+
+  function paintSoundToggle() {
+    if (!soundToggle) return;
+    soundToggle.textContent = soundMuted ? "🔇" : "🔊";
+    soundToggle.classList.toggle("is-muted", soundMuted);
+    soundToggle.setAttribute("aria-label", soundMuted ? "Unmute click sound" : "Mute click sound");
+  }
+  paintSoundToggle();
+
+  if (soundToggle) {
+    soundToggle.addEventListener("click", function () {
+      soundMuted = !soundMuted;
+      localStorage.setItem("tt-sound", soundMuted ? "off" : "on");
+      paintSoundToggle();
+    });
+  }
+
   var audioCtx = null;
   function playClickSound() {
+    if (soundMuted) return;
     try {
       var Ctx = window.AudioContext || window.webkitAudioContext;
       if (!Ctx) return;
@@ -162,6 +182,7 @@
   }
 
   document.addEventListener("click", function (e) {
+    if (soundMuted) return;
     var link = e.target.closest && e.target.closest("a[href]");
     if (!link || e.defaultPrevented) return;
 

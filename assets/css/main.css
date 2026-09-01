@@ -212,6 +212,19 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
   gap: 6px;
 }
 .search-toggle:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+.sound-toggle {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+}
+.sound-toggle:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.sound-toggle.is-muted { opacity: 0.6; }
 .search-toggle-hint {
   font-family: monospace;
   font-size: 0.72rem;
