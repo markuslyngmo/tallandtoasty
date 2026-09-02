@@ -42,7 +42,7 @@ description: "Café owner, runner, and general five-country kid. A few facts abo
 
 <div class="about-fact">
   <div class="about-fact-text">
-    <p>We also share custody of Mino, Stian's family's rescued street dog, who has strong opinions about pastry.</p>
+    <p>I'm also on regular dog-sitting duty for Mino, Stian's family's rescued street dog, who has strong opinions about pastry.</p>
   </div>
   <div class="about-fact-widget">
     <div class="about-widget">
@@ -111,7 +111,7 @@ description: "Café owner, runner, and general five-country kid. A few facts abo
   </div>
 </div>
 
-<p>In short: a kid from five countries who ended up with the most beautiful man in the universe, a rescue dog, and a bakery that opens at 07:00 sharp. Stop by Baker Hansen sometime, and I'll happily tell you why your pickled red onion is wrong.</p>
+<p>In short: a kid from five countries who ended up with the most beautiful man in the universe and a bakery that opens at 07:00 sharp. Stop by Baker Hansen sometime, and I'll happily tell you why your pickled red onion is wrong.</p>
 
 <p>Curious what a given week actually looks like? Check out <a href="{{ '/now/' | relative_url }}">Now</a>, or just come say hi at the café.</p>
 
