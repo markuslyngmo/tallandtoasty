@@ -205,6 +205,22 @@
         // A light switch flick: a sharp click, then a slightly duller settle.
         noiseClick(ctx, t, 1500, 0.12, 0.014);
         noiseClick(ctx, t + 0.05, 850, 0.1, 0.022);
+      } else if (kind === "ding") {
+        // Oven timer bell.
+        tone(ctx, t, 1200, 1150, 0.09, 0.38);
+        tone(ctx, t, 1800, 1750, 0.05, 0.32);
+      } else if (kind === "paw") {
+        // A soft, happy little boop-boop.
+        tone(ctx, t, 480, 640, 0.06, 0.06);
+        tone(ctx, t + 0.07, 640, 820, 0.05, 0.06);
+      } else if (kind === "coin") {
+        // A quick metallic flip-and-land.
+        noiseClick(ctx, t, 2400, 0.08, 0.01);
+        noiseClick(ctx, t + 0.04, 2000, 0.07, 0.012);
+        noiseClick(ctx, t + 0.09, 1200, 0.06, 0.02);
+      } else if (kind === "stamp") {
+        // A passport-stamp thud.
+        noiseClick(ctx, t, 500, 0.11, 0.03);
       }
     } catch (e) { /* ignore */ }
   }
