@@ -80,32 +80,6 @@
     });
   }
 
-  /* ---------- Pet Mino ---------- */
-  var minoBtn = document.getElementById("pet-mino-btn");
-  var pawZone = document.getElementById("paw-zone");
-  var minoNote = document.getElementById("mino-note");
-  if (minoBtn && pawZone) {
-    minoBtn.addEventListener("click", function () {
-      for (var i = 0; i < 4; i++) {
-        (function (i) {
-          setTimeout(function () {
-            var paw = document.createElement("span");
-            paw.className = "paw-print";
-            paw.textContent = "🐾";
-            paw.style.left = 6 + i * 22 + Math.random() * 8 + "px";
-            pawZone.appendChild(paw);
-            setTimeout(function () { paw.remove(); }, 1150);
-          }, i * 130);
-        })(i);
-      }
-      if (minoNote) {
-        minoNote.textContent = "Mino is Stian's family's rescued street dog. Excellent at looking sad near the pastry case.";
-        minoNote.classList.add("filled");
-      }
-      play("paw");
-    });
-  }
-
   /* ---------- Childhood distance counter ---------- */
   var distanceBtn = document.getElementById("distance-btn");
   var distanceTotal = document.getElementById("distance-total");
