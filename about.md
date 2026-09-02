@@ -14,34 +14,34 @@ wide: true
 </div>
 
 <div class="about-grid">
-  <div class="about-card">
+  <div class="about-card reveal">
     <p>I run <a href="https://maps.app.goo.gl/asKFtVdchrPNeq5p8">Baker Hansen</a> at Torshov. Seven days a week, my hands know exactly what a properly proofed loaf feels like.</p>
     <p>I'm also <button class="height-toggle-btn" id="height-toggle" type="button">186cm</button> tall — more or less why this blog is called "tall and toasty." I'm easy to find at the café. I'm the tall one.</p>
     <button class="about-card-btn" id="oven-btn" type="button">🥐 What's fresh right now?</button>
     <p class="about-card-note" id="oven-note"></p>
   </div>
 
-  <div class="about-card">
+  <div class="about-card reveal">
     <p>My husband Stian runs a café too, so our dinner conversations don't sound like most people's.</p>
     <button class="about-card-btn" id="dinner-btn" type="button">🍽️ Tonight's topic</button>
     <p class="about-card-note" id="dinner-note"></p>
   </div>
 
-  <div class="about-card">
+  <div class="about-card reveal">
     <p>I'm also on regular dog-sitting duty for Mino, Stian's family's rescued street dog, who has strong opinions about pastry.</p>
     <button class="about-card-btn" id="pet-mino-btn" type="button">🐾 Pet Mino</button>
     <div class="paw-trail-zone" id="paw-zone"></div>
     <p class="about-card-note" id="mino-note"></p>
   </div>
 
-  <div class="about-card">
+  <div class="about-card reveal">
     <p>When I'm not behind the till, I'm usually chasing a new 5K PR at <a href="https://maps.app.goo.gl/vmjXj41zGhNkkEin8">Bislett Stadion</a>, working through my <a href="{{ '/training-plan/' | relative_url }}">training plan</a>.</p>
     <button class="about-card-btn" id="pr-btn" type="button">⏱️ Reveal my Bislett PR</button>
     <div class="stopwatch-time" id="pr-time">00:00</div>
     <p class="about-card-note" id="pr-note"></p>
   </div>
 
-  <div class="about-card span-2">
+  <div class="about-card span-2 reveal">
     <p>I grew up split between five places — Nittedal, Manila, Vestby, Dar es Salaam, and The Hague — before landing in Oslo fourteen years ago. Not a single stretch of continuous schooling in there.</p>
     <div class="places-chain">
       <span class="place-pill">Nittedal</span><span class="place-arrow">→</span>
@@ -56,13 +56,13 @@ wide: true
     <p class="distance-caption" id="distance-caption"></p>
   </div>
 
-  <div class="about-card">
+  <div class="about-card reveal">
     <p>Or unwinding at a sauna somewhere on <a href="{{ '/my-oslo-guide/' | relative_url }}">my Oslo list</a>. I've tried enough of them to have a strong opinion on the ranking.</p>
     <button class="about-card-btn" id="sauna-btn" type="button">🎡 Which sauna tonight?</button>
     <p class="about-card-note" id="sauna-note"></p>
   </div>
 
-  <div class="about-card">
+  <div class="about-card reveal">
     <p>Stian and I are also increasingly arguing over whether a 35mm film camera was a good idea.</p>
     <button class="about-card-btn" id="camera-btn" type="button">🎞️ Good idea or bad idea?</button>
     <p class="about-card-note" id="camera-note"></p>

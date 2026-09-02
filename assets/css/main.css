@@ -16,6 +16,54 @@ a, button, input, label, select, .card, .nav-toggle {
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* ---------- Page transitions (every page, no per-template work needed) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  main { animation: page-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
+}
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+html.page-leaving body {
+  animation: page-exit 0.16s ease forwards;
+}
+@keyframes page-exit {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.page-leaving body { animation: none; }
+}
+
+/* ---------- Ambient wandering giraffe (rare, decorative) ---------- */
+.ambient-giraffe {
+  position: fixed;
+  bottom: 10px;
+  left: -50px;
+  font-size: 1.6rem;
+  z-index: 40;
+  pointer-events: none;
+  animation: giraffe-walk 9s linear forwards;
+}
+@keyframes giraffe-walk {
+  from { left: -50px; }
+  to { left: 100vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-giraffe { display: none; }
+}
+
+/* ---------- Tactile press feedback ---------- */
+.card-cta, .about-card-btn, .theme-toggle, .search-toggle, .sound-toggle,
+.height-toggle-btn, .search-close, .tag-pill, .nav-links a, .back-to-top {
+  transition: transform 0.1s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.card-cta:active, .about-card-btn:active, .theme-toggle:active, .search-toggle:active,
+.sound-toggle:active, .height-toggle-btn:active, .search-close:active, .tag-pill:active,
+.nav-links a:active, .back-to-top:active {
+  transform: scale(0.93);
+}
+
 /* ---------- Palette ---------- */
 :root {
   --text-font-family: 'Ubuntu', sans-serif;
@@ -356,10 +404,25 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
   height: 30px;
   border: 4px solid var(--heading);
 }
-.corner-tl { top: 0; left: 0; border-right: none !important; border-bottom: none !important; }
-.corner-tr { top: 0; right: 0; border-left: none !important; border-bottom: none !important; }
-.corner-bl { bottom: 0; left: 0; border-right: none !important; border-top: none !important; }
-.corner-br { bottom: 0; right: 0; border-left: none !important; border-top: none !important; }
+.corner-tl { top: 0; left: 0; border-right: none !important; border-bottom: none !important; transform-origin: top left; }
+.corner-tr { top: 0; right: 0; border-left: none !important; border-bottom: none !important; transform-origin: top right; }
+.corner-bl { bottom: 0; left: 0; border-right: none !important; border-top: none !important; transform-origin: bottom left; }
+.corner-br { bottom: 0; right: 0; border-left: none !important; border-top: none !important; transform-origin: bottom right; }
+
+@media (prefers-reduced-motion: no-preference) {
+  span.corner {
+    opacity: 0;
+    animation: corner-grow 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .corner-tl { animation-delay: 0.05s; }
+  .corner-tr { animation-delay: 0.12s; }
+  .corner-bl { animation-delay: 0.19s; }
+  .corner-br { animation-delay: 0.26s; }
+}
+@keyframes corner-grow {
+  from { opacity: 0; transform: scale(0.3); }
+  to { opacity: 1; transform: scale(1); }
+}
 
 .hero-photo {
   width: 320px;

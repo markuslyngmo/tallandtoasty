@@ -23,7 +23,7 @@ permalink: /blog/
 
 <div class="post-card-list">
   {% for post in site.posts limit: 6 %}
-  <article class="post-card">
+  <article class="post-card reveal">
     {% assign thumb = post.content | first_image %}
     {% if thumb %}
     <a href="{{ post.url | relative_url }}" class="post-card-thumb">

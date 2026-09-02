@@ -38,8 +38,11 @@
     wrap.appendChild(table);
   });
 
-  /* ---------- Scroll reveal ---------- */
+  /* ---------- Scroll reveal (staggered) ---------- */
   var revealEls = document.querySelectorAll(".reveal");
+  revealEls.forEach(function (el, i) {
+    el.style.transitionDelay = (i % 6) * 70 + "ms";
+  });
   if ("IntersectionObserver" in window && revealEls.length) {
     var io = new IntersectionObserver(
       function (entries) {
@@ -85,6 +88,18 @@
       document.body.appendChild(spot);
       setTimeout(function () { spot.remove(); }, 900);
     });
+  }
+
+  /* ---------- Ambient wandering giraffe (rare, decorative) ---------- */
+  if (!reduceMotion && Math.random() < 0.35) {
+    setTimeout(function () {
+      var g = document.createElement("span");
+      g.className = "ambient-giraffe";
+      g.textContent = "🦒";
+      g.setAttribute("aria-hidden", "true");
+      document.body.appendChild(g);
+      g.addEventListener("animationend", function () { g.remove(); });
+    }, 6000 + Math.random() * 14000);
   }
 
   /* ---------- Easter egg: Konami code stampede ---------- */
@@ -251,7 +266,6 @@
   }
 
   document.addEventListener("click", function (e) {
-    if (soundMuted) return;
     var link = e.target.closest && e.target.closest("a[href]");
     if (!link || e.defaultPrevented) return;
 
@@ -270,11 +284,13 @@
       return;
     }
 
-    // Same-tab navigation: play the sound, then give it a beat to be heard before leaving the page.
+    // Same-tab navigation: transition out and play the sound before leaving the page.
     e.preventDefault();
     playSound("click");
+    document.documentElement.classList.add("page-leaving");
     var dest = link.href;
-    setTimeout(function () { window.location.href = dest; }, 110);
+    var delay = reduceMotion ? 20 : 170;
+    setTimeout(function () { window.location.href = dest; }, delay);
   });
 
   /* ---------- Easter egg: 5x click the logo ---------- */
