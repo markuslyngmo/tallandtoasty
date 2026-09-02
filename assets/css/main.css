@@ -992,6 +992,8 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
 .about-card.span-2 { grid-column: span 2; }
 
 .about-card-btn {
+  position: relative;
+  overflow: hidden;
   margin-top: auto;
   border: 1px solid var(--line);
   background: var(--surface);
@@ -1003,6 +1005,19 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
   align-self: flex-start;
 }
 .about-card-btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+.btn-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  transform: scale(0);
+  animation: ripple-pop 0.5s ease-out;
+  pointer-events: none;
+}
+@keyframes ripple-pop {
+  from { transform: scale(0); opacity: 0.6; }
+  to { transform: scale(1); opacity: 0; }
+}
 .about-card-note { font-size: 0.85rem; color: var(--text-dim); min-height: 1.2em; margin: 0; }
 .about-card-note.filled { color: var(--text); }
 
@@ -1030,8 +1045,16 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
   padding: 3px 10px;
   font-size: 0.72rem;
   font-weight: 700;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
-.place-arrow { color: var(--text-dim); font-size: 0.72rem; align-self: center; }
+.place-pill.lit {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+  transform: scale(1.08);
+}
+.place-arrow { color: var(--text-dim); font-size: 0.72rem; align-self: center; transition: color 0.3s ease; }
+.place-arrow.lit { color: var(--accent); font-weight: 700; }
 .distance-total { font-size: 1.5rem; font-weight: 700; color: var(--heading); font-variant-numeric: tabular-nums; }
 .distance-caption { font-size: 0.78rem; color: var(--text-dim); }
 
