@@ -5,6 +5,24 @@
     if (window.ttPlaySound) window.ttPlaySound(kind);
   }
 
+  /* ---------- Click ripple on every widget button ---------- */
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion) {
+    document.querySelectorAll(".about-card-btn").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        var rect = btn.getBoundingClientRect();
+        var size = Math.max(rect.width, rect.height) * 1.3;
+        var ripple = document.createElement("span");
+        ripple.className = "btn-ripple";
+        ripple.style.width = ripple.style.height = size + "px";
+        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+        btn.appendChild(ripple);
+        ripple.addEventListener("animationend", function () { ripple.remove(); });
+      });
+    });
+  }
+
   /* ---------- Height toggle ---------- */
   var heightBtn = document.getElementById("height-toggle");
   if (heightBtn) {
@@ -95,22 +113,38 @@
   if (distanceBtn && distanceTotal) {
     var TARGET_KM = 35464;
     var running = false;
+    var pills = document.querySelectorAll(".place-pill");
+    var arrows = document.querySelectorAll(".place-arrow");
     distanceBtn.addEventListener("click", function () {
       if (running) return;
       running = true;
       play("stamp");
+      pills.forEach(function (p) { p.classList.remove("lit"); });
+      arrows.forEach(function (a) { a.classList.remove("lit"); });
       var start = null;
-      var duration = 1100;
+      var duration = 1500;
+      var lastLit = -1;
       function step(ts) {
         if (!start) start = ts;
         var progress = Math.min(1, (ts - start) / duration);
         var eased = 1 - Math.pow(1 - progress, 3);
         var current = Math.round(TARGET_KM * eased);
         distanceTotal.textContent = current.toLocaleString("en-US") + " km";
+
+        // Light up each stop on the route as the count-up "travels" past it.
+        var litCount = 1 + Math.floor(eased * (pills.length - 1));
+        if (litCount !== lastLit) {
+          lastLit = litCount;
+          pills.forEach(function (p, i) { p.classList.toggle("lit", i < litCount); });
+          arrows.forEach(function (a, i) { a.classList.toggle("lit", i < litCount - 1); });
+        }
+
         if (progress < 1) {
           requestAnimationFrame(step);
         } else {
           running = false;
+          pills.forEach(function (p) { p.classList.add("lit"); });
+          arrows.forEach(function (a) { a.classList.add("lit"); });
           if (distanceCaption) {
             distanceCaption.textContent = "That's about 88% of the way around the Earth. 🌍";
           }
@@ -193,7 +227,7 @@
     cameraBtn.addEventListener("click", function () {
       var good = Math.random() < 0.5;
       cameraNote.textContent = good ? "GOOD IDEA 🎉" : "BAD IDEA 😅";
-      cameraNote.className = "about-widget-note filled coin-result " + (good ? "good" : "bad");
+      cameraNote.className = "about-card-note filled coin-result " + (good ? "good" : "bad");
       play("coin");
     });
   }
