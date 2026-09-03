@@ -1,6 +1,14 @@
 (function () {
   "use strict";
 
+  /* ---------- Undo the page-exit transition when restored from bfcache ---------- */
+  // Without this, hitting Back on a browser that restores this page from its
+  // back/forward cache would show it frozen at the exit animation's faded-out
+  // end state (the "page-leaving" class + `animation: ... forwards` hold it).
+  window.addEventListener("pageshow", function (e) {
+    if (e.persisted) document.documentElement.classList.remove("page-leaving");
+  });
+
   /* ---------- Theme toggle ---------- */
   var root = document.documentElement;
   var toggle = document.querySelector(".theme-toggle");

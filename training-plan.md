@@ -9,7 +9,7 @@ permalink: /training-plan/
 
 *This is a plan I have made with adding sources into NotebookLM. I have used sources from Rhonda Patrick, Ph.D. (Dr. RP), Andrew Huberman, Jan Hoff (the 4x4 method), and Tim Ferriss. I have also added my personal information, like the vitamins I take, my training sessions, and what I eat (my weekly recipes). Take that into consideration if you use this as information.*
 
-![AdvancedFitness](/assets/images/blog/advanced_fitness_longevity_protocol.png)
+![AdvancedFitness](/assets/images/blog/advanced_fitness_longevity_protocol.jpeg)
 
 ## Weekly Plan: Strategic Distribution & Fasting Adaptation
 
