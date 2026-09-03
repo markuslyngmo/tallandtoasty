@@ -1,5 +1,5 @@
-{% assign meta_description = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 %}
-{% if meta_description == "" %}{% assign meta_description = site.description | strip_html | strip_newlines | truncate: 160 %}{% endif %}
+{% assign meta_description = page.description | default: page.excerpt | newline_to_br | replace: "<br />", " " | strip_html | strip_newlines | truncate: 160 %}
+{% if meta_description == "" %}{% assign meta_description = site.description | newline_to_br | replace: "<br />", " " | strip_html | strip_newlines | truncate: 160 %}{% endif %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
 <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
