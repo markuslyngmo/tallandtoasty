@@ -1,28 +1,32 @@
 ---
 layout: default
 ---
-<section class="hero">
-  <div class="bracket-frame">
-    <span class="corner corner-tl"></span>
-    <span class="corner corner-tr"></span>
-    <span class="corner corner-bl"></span>
-    <span class="corner corner-br"></span>
-    <img class="hero-photo" src="{{ '/assets/images/blog/img_1259.jpeg' | relative_url }}" alt="Markus">
+<section class="dark-hero">
+  <div class="dark-hero-inner">
+    <div class="dark-hero-text">
+      <div class="kicker">&gt; café owner &middot; runner &middot; oslo</div>
+      <h1>Markus, <span class="accent">tall and toasty</span></h1>
+      <p>
+        I live in Oslo and run my own café. When I'm not working you'll find me
+        chasing 5K PRs at Bislett Stadion, in the sauna, or eating something
+        really good.
+      </p>
+      <div class="scroll-cue">Scroll ↓</div>
+    </div>
+    <div class="dark-hero-photo-wrap">
+      <img class="dark-hero-photo" src="{{ '/assets/images/blog/img_1259.jpeg' | relative_url }}" alt="Markus">
+    </div>
   </div>
-  <div class="kicker">&gt; café owner &middot; runner &middot; oslo</div>
-  <h1>Markus, <span class="accent">tall and toasty</span></h1>
-  <p class="lede">
-    I live in Oslo and run my own café. When I'm not working you'll find me
-    chasing 5K PRs at Bislett Stadion, in the sauna, or eating something
-    really good.
-  </p>
-  <div class="scroll-cue">Scroll ↓</div>
+  <svg class="hero-cloud" viewBox="0 0 1999 454" preserveAspectRatio="none" aria-hidden="true">
+    <path class="cloud-back" d="M824.001 403L875.501 422H1999V63.1446C1977.5 77.3383 1961.18 93.6986 1958 93.5001C1950 93.0001 1946 25.5001 1846 11.5001C1746 -2.49994 1705.5 70.0001 1698.5 69.5001C1691.5 69.0001 1678 -0.499932 1559 0.500068C1440 1.50007 1439.5 117 1432.5 119.5C1425.5 122 1363.5 79.0001 1292 113.5C1220.5 148 1244.5 212 1237.5 216C1230.5 220 1191 172 1106.5 198.5C1022 225 1035 289 1024 291C1013 293 967.001 231.5 875.501 278C784.001 324.5 824.001 403 824.001 403Z"/>
+    <path class="cloud-front" d="M1347 413C1365.5 413 1395.5 375 1538.5 375C1681.5 375 1717 404 1729 403.5C1741 403 1752.5 323.5 1914.5 322.5C1947.52 322.296 1975.45 324.357 1999 327.767V453.5H0V393.684C29.7494 380.632 86.3331 368.933 191.5 375C399.5 387 447.5 444 457 444C466.5 444 488 390.5 676 375C864 359.5 931.5 413 940 413C948.5 413 990 340.5 1155.5 346.5C1321 352.5 1328.5 413 1347 413Z"/>
+  </svg>
 </section>
 
 <div class="section-label">// About</div>
-<article class="page-frame reveal">
+<div class="page-frame reveal">
   {{ content }}
-</article>
+</div>
 
 <div class="section-label">// Explore</div>
 <div class="card-grid">
