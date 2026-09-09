@@ -4,25 +4,25 @@ title: "About Me"
 permalink: /about/
 description: "Café owner, runner, and general five-country kid. A few facts about Markus, some of them interactive."
 ---
-<section class="about-hero">
-  <div class="about-hero-inner">
-    <div class="about-hero-text">
+<section class="dark-hero">
+  <div class="dark-hero-inner">
+    <div class="dark-hero-text">
       <h1>🦒 Hi there.<br>I'm Markus.</h1>
       <p>I started baking bread before I was old enough to legally serve it, and never really stopped.</p>
       <p>I've spent the last fourteen years building <a href="https://maps.app.goo.gl/asKFtVdchrPNeq5p8">Baker Hansen</a> from the ground up in Torshov, one 05:50 opening at a time.</p>
       <p>These days, when I'm not behind the till, I'm chasing 5K PRs at Bislett Stadion and slowly turning this blog into a small, weird corner of the internet.</p>
     </div>
-    <div class="about-hero-photo-wrap">
-      <img class="about-hero-photo" src="{{ '/assets/images/blog/img_1259.jpeg' | relative_url }}" alt="Markus at Bislett Stadion">
+    <div class="dark-hero-photo-wrap">
+      <img class="dark-hero-photo" src="{{ '/assets/images/blog/img_1259.jpeg' | relative_url }}" alt="Markus at Bislett Stadion">
     </div>
   </div>
-  <svg class="about-cloud" viewBox="0 0 1999 454" preserveAspectRatio="none" aria-hidden="true">
+  <svg class="hero-cloud" viewBox="0 0 1999 454" preserveAspectRatio="none" aria-hidden="true">
     <path class="cloud-back" d="M824.001 403L875.501 422H1999V63.1446C1977.5 77.3383 1961.18 93.6986 1958 93.5001C1950 93.0001 1946 25.5001 1846 11.5001C1746 -2.49994 1705.5 70.0001 1698.5 69.5001C1691.5 69.0001 1678 -0.499932 1559 0.500068C1440 1.50007 1439.5 117 1432.5 119.5C1425.5 122 1363.5 79.0001 1292 113.5C1220.5 148 1244.5 212 1237.5 216C1230.5 220 1191 172 1106.5 198.5C1022 225 1035 289 1024 291C1013 293 967.001 231.5 875.501 278C784.001 324.5 824.001 403 824.001 403Z"/>
     <path class="cloud-front" d="M1347 413C1365.5 413 1395.5 375 1538.5 375C1681.5 375 1717 404 1729 403.5C1741 403 1752.5 323.5 1914.5 322.5C1947.52 322.296 1975.45 324.357 1999 327.767V453.5H0V393.684C29.7494 380.632 86.3331 368.933 191.5 375C399.5 387 447.5 444 457 444C466.5 444 488 390.5 676 375C864 359.5 931.5 413 940 413C948.5 413 990 340.5 1155.5 346.5C1321 352.5 1328.5 413 1347 413Z"/>
   </svg>
 </section>
 
-<div class="about-content">
+<div class="content-wrap">
   <div class="about-grid">
     <div class="about-card reveal">
       <p>I run <a href="https://maps.app.goo.gl/asKFtVdchrPNeq5p8">Baker Hansen</a> at Torshov. Seven days a week, my hands know exactly what a properly proofed loaf feels like.</p>

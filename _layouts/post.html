@@ -7,11 +7,6 @@ layout: default
 </div>
 
 <article class="page-frame reveal in-view">
-  <span class="corner corner-tl"></span>
-  <span class="corner corner-tr"></span>
-  <span class="corner corner-bl"></span>
-  <span class="corner corner-br"></span>
-
   <h1>{{ page.title }}</h1>
   <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b, %Y" }}</time></p>
   {% if page.tags.size > 0 %}
