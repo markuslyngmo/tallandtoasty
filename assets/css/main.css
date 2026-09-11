@@ -925,6 +925,19 @@ ul.blog-posts a:hover { color: var(--accent); background: none; }
 .cloud-back { fill: #2a1e14; }
 .cloud-front { fill: var(--bg); }
 
+/* Compact dark hero — no photo, just a heading + tagline (Blog, listing-style pages) */
+.dark-hero-compact { padding-top: 40px; }
+.dark-hero-compact .dark-hero-inner {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 56px;
+}
+.dark-hero-compact .dark-hero-text { flex: none; width: 100%; max-width: 640px; }
+.dark-hero-compact .dark-hero-text h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 12px; }
+.dark-hero-compact .dark-hero-text p { max-width: none; margin-left: auto; margin-right: auto; }
+
 .content-wrap { max-width: var(--wide-width); margin: 0 auto; padding: 44px 24px 60px; }
 
 .about-grid {
