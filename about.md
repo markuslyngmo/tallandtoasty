@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: full
 title: "About Me"
 permalink: /about/
 description: "Café owner, runner, and general five-country kid. A few facts about Markus, some of them interactive."
