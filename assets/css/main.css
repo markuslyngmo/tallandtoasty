@@ -8,7 +8,7 @@
 html, body {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🦒</text></svg>") 16 0, auto;
 }
-a, button, input, label, select, .card, .nav-toggle {
+a, button, input, label, select, .card {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🦒</text></svg>") 16 0, pointer;
 }
 
@@ -172,7 +172,6 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
 .highlight, pre { background: var(--bg-deep); border: 1px solid var(--line); border-radius: 10px; padding: 1em; overflow-x: auto; }
 
 .wrap { max-width: var(--content-width); margin: 0 auto; padding: 0 24px; }
-.wrap-wide { max-width: var(--wide-width); margin: 0 auto; padding: 0 24px; }
 
 /* ---------- Sticky top nav (cnewton-style) ---------- */
 .site-header {
@@ -505,15 +504,7 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
 .tl-title { flex: 1; min-width: 0; font-weight: 700; color: var(--heading); border: none; background: none; padding: 0; }
 .tl-title:hover { background: none; color: var(--accent); }
 .tl-count { color: var(--text-dim); font-size: 0.85rem; white-space: nowrap; flex-shrink: 0; }
-.toast-leaderboard-status { color: var(--text-dim); font-style: italic; padding: 8px 0; }
 
-/* ---------- Blog list ---------- */
-.full-post { margin: 3em 0; padding-bottom: 3em; border-bottom: 1px dashed var(--line); }
-.full-post:first-of-type { margin-top: 1.5em; }
-.full-post h2 { margin-top: 0; }
-.full-post h2 a { border: none; background: none; padding: 0; color: var(--heading); }
-.full-post h2 a:hover { background: none; color: var(--accent); }
-.full-post .post-meta { color: var(--text-dim); font-style: italic; margin-bottom: 1.4em; }
 
 /* ---------- Blog post cards (excerpt + thumbnail) ---------- */
 .post-card-list { display: flex; flex-direction: column; gap: 26px; margin-top: 30px; }
@@ -624,22 +615,6 @@ code { background: var(--bg-deep); padding: 0.15em 0.4em; border-radius: 5px; fo
 .year-post-list a { border: none; background: none; padding: 0; color: var(--text); font-weight: 600; }
 .year-post-list a:hover { color: var(--accent); background: none; }
 
-/* ---------- Pagination ---------- */
-.pagination-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.pagination-nav a { border: none; background: var(--bg-deep); padding: 10px 16px; border-radius: 10px; font-size: 0.9rem; }
-.pagination-nav a:hover { background: var(--accent); color: var(--bg); }
-.pagination-status { color: var(--text-dim); font-size: 0.85rem; }
-
-.blog-year { color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.85rem; margin: 40px 0 6px; }
 ul.blog-posts { list-style: none; margin: 0; padding: 0; }
 ul.blog-posts li { display: flex; gap: 18px; align-items: baseline; padding: 12px 0; border-bottom: 1px dashed var(--line); }
 ul.blog-posts li:hover { padding-left: 6px; border-bottom-color: var(--accent); }

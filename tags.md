@@ -2,6 +2,7 @@
 layout: page
 title: "Tags"
 permalink: /tags/
+description: "Browse every post on tall and toasty by topic."
 ---
 # 🏷️ Browse by topic
 

@@ -2,10 +2,11 @@
 layout: page
 title: "Videos"
 permalink: /videos/
+description: "Clips from running, café life and whatever else ends up on camera, with click-to-play YouTube embeds."
 ---
 # 🎥 Videos
 
-Clips from running, café life, and whatever else ends up on camera. Click a thumbnail to play &mdash; nothing loads from YouTube until you do. More on the <a href="https://www.youtube.com/@MarkusLyngmo" target="_blank" rel="noopener">YouTube channel</a>.
+Clips from running, café life, and whatever else ends up on camera. Click a thumbnail to play &mdash; the video player and its cookies only load from YouTube once you do. More on the <a href="https://www.youtube.com/@MarkusLyngmo" target="_blank" rel="noopener">YouTube channel</a>.
 
 <div class="video-grid">
   {% for video in site.data.videos %}

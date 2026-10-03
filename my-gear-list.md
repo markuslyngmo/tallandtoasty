@@ -2,6 +2,7 @@
 layout: page
 title: "My Gear List"
 permalink: /my-gear-list/
+description: "The running shoes, watch, glasses and tech Markus uses every day."
 ---
 # My Gear List
 
@@ -15,7 +16,7 @@ Nobody is asking about my gear list but here it is anyway. This is the shoes, cl
   My running shoes I use for longer runs.
 - **Daily Trainers:** [Adidas Adizero Boston 13 Boston](https://www.adidas.com/us/adizero-boston-13-shoes/JS4945.html)   
   Super comfortable as everyday shoes, a little uncomfortable when I get to 8km.
-- **Running Glasses:** [Oakley Eyewear SUTRO LITE SWEEP](https:https://www.oakley.com/en-us/product/W0OO9465?variant=888392603982)   
+- **Running Glasses:** [Oakley Eyewear SUTRO LITE SWEEP](https://www.oakley.com/en-us/product/W0OO9465?variant=888392603982)   
   Great running glasses.
 
 ## Tech stuff

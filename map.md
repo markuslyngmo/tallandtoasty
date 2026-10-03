@@ -2,6 +2,7 @@
 layout: page
 title: "Run Map"
 permalink: /map/
+description: "Every run plotted at its real GPS start point. Click a pin to read the post about that run."
 ---
 # 🗺️ Run Map
 

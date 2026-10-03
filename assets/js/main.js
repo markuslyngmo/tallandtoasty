@@ -232,10 +232,6 @@
         // Oven timer bell.
         tone(ctx, t, 1200, 1150, 0.09, 0.38);
         tone(ctx, t, 1800, 1750, 0.05, 0.32);
-      } else if (kind === "paw") {
-        // A soft, happy little boop-boop.
-        tone(ctx, t, 480, 640, 0.06, 0.06);
-        tone(ctx, t + 0.07, 640, 820, 0.05, 0.06);
       } else if (kind === "coin") {
         // A quick metallic flip-and-land.
         noiseClick(ctx, t, 2400, 0.08, 0.01);
@@ -299,6 +295,8 @@
     var dest = link.href;
     var delay = reduceMotion ? 20 : 170;
     setTimeout(function () { window.location.href = dest; }, delay);
+    // If the navigation never happens (a download, a blocked request), don't leave the page faded out.
+    setTimeout(function () { document.documentElement.classList.remove("page-leaving"); }, delay + 2500);
   });
 
   /* ---------- Easter egg: 5x click the logo ---------- */

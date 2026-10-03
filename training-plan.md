@@ -2,6 +2,7 @@
 layout: page
 title: "Training Plan"
 permalink: /training-plan/
+description: "Markus's body recomposition and longevity plan: Norwegian 4x4 intervals, Zone 2 running, strength days and sauna recovery."
 ---
 # 🏋️Training Plan
 
