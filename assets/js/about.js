@@ -133,7 +133,7 @@
   var prTime = document.getElementById("pr-time");
   var prNote = document.getElementById("pr-note");
   if (prBtn && prTime) {
-    var PR_SECONDS = 22 * 60 + 50;
+    var PR_SECONDS = 24 * 60 + 24;
     var prRunning = false;
     prBtn.addEventListener("click", function () {
       if (prRunning) return;
