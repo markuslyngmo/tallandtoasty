@@ -2,6 +2,7 @@
 layout: page
 title: "Now"
 permalink: /now/
+description: "What Markus is up to right now: work, training, travel and whatever he is currently obsessing over."
 ---
 # What am I up to?
 

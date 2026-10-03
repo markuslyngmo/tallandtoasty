@@ -2,6 +2,7 @@
 layout: page
 title: "My Oslo Guide"
 permalink: /my-oslo-guide/
+description: "Markus's go-to list in Oslo: saunas, spas, an arcade bar, running routes, cafés and cocktail bars."
 ---
 # My Oslo Guide
 

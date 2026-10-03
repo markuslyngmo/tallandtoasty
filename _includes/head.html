@@ -1,4 +1,5 @@
 {% assign meta_description = page.description | default: page.excerpt | newline_to_br | replace: "<br />", " " | strip_html | strip_newlines | truncate: 160 %}
+{% if page.type == "tag" %}{% assign meta_description = "Posts tagged “" | append: page.title | escape | append: "” on tall and toasty." %}{% endif %}
 {% if meta_description == "" %}{% assign meta_description = site.description | newline_to_br | replace: "<br />", " " | strip_html | strip_newlines | truncate: 160 %}{% endif %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">

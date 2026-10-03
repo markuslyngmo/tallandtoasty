@@ -37,7 +37,7 @@ Siden er da tilgjengelig på http://127.0.0.1:4000
 ## Struktur
 
 - `_posts/` — blogginnlegg
-- `_layouts/` — HTML-maler (default, home, page, post)
+- `_layouts/` — HTML-maler (default, home, full, page, post, tag-archive)
 - `_includes/` — gjenbrukbare deler (nav, footer, head)
 - `assets/css/main.css` — safari/sjiraff-temaet
 - `assets/js/` — effekter og easter eggs

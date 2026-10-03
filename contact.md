@@ -2,6 +2,7 @@
 layout: page
 title: "Contact"
 permalink: /contact/
+description: "No contact form: stop by the café, or find Markus on Strava and YouTube."
 ---
 # 📬 Contact
 
