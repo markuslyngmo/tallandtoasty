@@ -8,9 +8,9 @@ description: "Café owner, runner, and general five-country kid. A few facts abo
   <div class="dark-hero-inner">
     <div class="dark-hero-text">
       <h1>🦒 Hi there.<br>I'm Markus.</h1>
-      <p>I started baking bread before I was old enough to legally serve it, and never really stopped.</p>
-      <p>I've spent the last fourteen years building <a href="https://maps.app.goo.gl/asKFtVdchrPNeq5p8">Baker Hansen</a> from the ground up in Torshov, one 05:50 opening at a time.</p>
-      <p>These days, when I'm not behind the till, I'm chasing 5K PRs at Bislett Stadion and slowly turning this blog into a small, weird corner of the internet.</p>
+      <p>I've been running cafés for twelve years. Since 2024, that's been <a href="https://maps.app.goo.gl/asKFtVdchrPNeq5p8">Baker Hansen on Vogts gate</a>.</p>
+      <p>I've lived in Oslo for fourteen years, after growing up in five different places.</p>
+      <p>When I'm not behind the till, I'm chasing 5K PRs at Bislett Stadion, trying saunas around the city, and writing about it here.</p>
     </div>
     <div class="dark-hero-photo-wrap">
       <img class="dark-hero-photo" src="{{ '/assets/images/blog/img_1259.jpeg' | relative_url }}" alt="Markus at Bislett Stadion">
@@ -25,7 +25,7 @@ description: "Café owner, runner, and general five-country kid. A few facts abo
 <div class="content-wrap">
   <div class="about-grid">
     <div class="about-card reveal">
-      <p>I run <a href="https://maps.app.goo.gl/asKFtVdchrPNeq5p8">Baker Hansen</a> at Torshov. Seven days a week, my hands know exactly what a properly proofed loaf feels like.</p>
+      <p>I run <a href="https://maps.app.goo.gl/asKFtVdchrPNeq5p8">Baker Hansen</a> on Vogts gate, which makes me the guy who knows exactly how many rolls need to come out of the oven at seven.</p>
       <p>I'm also <button class="height-toggle-btn" id="height-toggle" type="button">186cm</button> tall — more or less why this blog is called "tall and toasty." I'm easy to find at the café. I'm the tall one.</p>
       <button class="about-card-btn" id="oven-btn" type="button">🥐 What's fresh right now?</button>
       <p class="about-card-note" id="oven-note"></p>
