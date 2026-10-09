@@ -6,7 +6,7 @@ description: "Every run plotted at its real GPS start point. Click a pin to read
 ---
 # 🗺️ Run Map
 
-Every pin is a real run, plotted from the actual GPS start point &mdash; click one to jump to the post about that run.
+Every pin is a real run, placed at its actual GPS start point. Click one to read the post about that run.
 
 <div id="run-map"></div>
 

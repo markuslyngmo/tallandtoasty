@@ -26,7 +26,7 @@
       })
       .catch(function () {
         loading = false;
-        hintEl.textContent = "Search is unavailable right now — try again in a bit.";
+        hintEl.textContent = "Search is unavailable right now. Try again in a bit.";
       });
   }
 

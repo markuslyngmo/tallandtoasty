@@ -2,7 +2,7 @@
 layout: full
 title: "About Me"
 permalink: /about/
-description: "Café owner, runner, and general five-country kid. A few facts about Markus, some of them interactive."
+description: "Café owner, runner, and a kid who grew up in five different places. A few facts about Markus, some of them interactive."
 ---
 <section class="dark-hero">
   <div class="dark-hero-inner">
@@ -26,7 +26,7 @@ description: "Café owner, runner, and general five-country kid. A few facts abo
   <div class="about-grid">
     <div class="about-card reveal">
       <p>I run <a href="https://maps.app.goo.gl/asKFtVdchrPNeq5p8">Baker Hansen</a> on Vogts gate, which makes me the guy who knows exactly how many rolls need to come out of the oven at seven.</p>
-      <p>I'm also <button class="height-toggle-btn" id="height-toggle" type="button">186cm</button> tall — more or less why this blog is called "tall and toasty." I'm easy to find at the café. I'm the tall one.</p>
+      <p>I'm also <button class="height-toggle-btn" id="height-toggle" type="button">186cm</button> tall, which is more or less why this blog is called "tall and toasty." I'm easy to find at the café. I'm the tall one.</p>
       <button class="about-card-btn" id="oven-btn" type="button">🥐 What's fresh right now?</button>
       <p class="about-card-note" id="oven-note"></p>
     </div>
@@ -41,7 +41,7 @@ description: "Café owner, runner, and general five-country kid. A few facts abo
     </div>
 
     <div class="about-card span-2 reveal">
-      <p>I grew up split between five places — Nittedal, Manila, Vestby, Dar es Salaam, and The Hague — before landing in Oslo fourteen years ago. Not a single stretch of continuous schooling in there.</p>
+      <p>I grew up split between five places (Nittedal, Manila, Vestby, Dar es Salaam and The Hague) before landing in Oslo fourteen years ago. Not a single stretch of continuous schooling in there.</p>
       <div class="places-chain">
         <span class="place-pill">Nittedal</span><span class="place-arrow">→</span>
         <span class="place-pill">Manila</span><span class="place-arrow">→</span>
@@ -70,7 +70,7 @@ description: "Café owner, runner, and general five-country kid. A few facts abo
   </div>
 
   <div class="about-outro">
-    <p>In short: a kid from five countries who ended up with the most beautiful man in the universe and a bakery that opens at 07:00 sharp. Stop by Baker Hansen sometime, and I'll happily tell you why your pickled red onion is wrong.</p>
+    <p>In short: a kid from five different places who ended up with the most beautiful man in the universe and a bakery that opens at 07:00 sharp. Stop by Baker Hansen sometime, and I'll happily tell you why your pickled red onion is wrong.</p>
 
     <p>Curious what a given week actually looks like? Check out <a href="{{ '/now/' | relative_url }}">Now</a>, or just come say hi at the café.</p>
   </div>
