@@ -14,8 +14,8 @@ The easiest way to actually get a response is to [stop by Baker Hansen](https://
 
 ### Find me online
 
-- [Threads](https://www.threads.com/@markuslyngmo) &mdash; you can send me a DM there too
+- [Threads](https://www.threads.com/@markuslyngmo) (you can send me a DM there too)
 - [Strava](https://www.strava.com/athletes/56752973)
 - [YouTube](https://www.youtube.com/@MarkusLyngmo)
 
-*(No email listed here on purpose — I'd rather see you at the café.)*
+*(No email listed here on purpose. I'd rather see you at the café.)*

@@ -43,7 +43,7 @@
       "Sourdough loaves, six of them, all pre-ordered.",
       "The last chocolate croissant. It has your name on it.",
       "A tray of cardamom buns cooling by the window.",
-      "Nothing yet — ask again in ten minutes.",
+      "Nothing yet. Ask again in ten minutes.",
       "Rye bread, fresh enough to fog up the display case."
     ];
     var lastBake = -1;
@@ -154,7 +154,7 @@
         } else {
           prRunning = false;
           if (prNote) {
-            prNote.innerHTML = '24 Jul 2026 at Bislett Stadion — <a href="/new-5k-pr-at-bislett-stadion/">read about it</a>';
+            prNote.innerHTML = '24 Jul 2026 at Bislett Stadion (<a href="/new-5k-pr-at-bislett-stadion/">read about it</a>)';
             prNote.classList.add("filled");
           }
         }
@@ -187,7 +187,7 @@
         if (ticks >= maxTicks) {
           clearInterval(interval);
           var pick = saunas[Math.floor(Math.random() * saunas.length)];
-          saunaNote.innerHTML = "<strong>" + pick.name + "</strong> — " + pick.line + ' <a href="/how-i-rank-oslos-saunas/">See the full ranking →</a>';
+          saunaNote.innerHTML = "<strong>" + pick.name + "</strong>: " + pick.line + ' <a href="/how-i-rank-oslos-saunas/">See the full ranking →</a>';
           spinning = false;
         }
       }, 90);
