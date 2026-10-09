@@ -21,7 +21,7 @@ I don’t regret that decision for a second.
 
 I had never really considered traveling to Mexico, and definitely not Mexico City. It completely surprised me. We were told to stay five to six days.
 
-We stayed in Zona Rosa, a lively and central neighborhood known for its restaurants, cafés, nightlife, and LGBTQ-friendly atmosphere. It felt safe, walkable, and full of energy. Our hotel was Hotel Genève, a historic hotel that opened in 1907. It has an old-world feel, classic décor, and walls covered with photos and memorabilia from another era. It’s not ultra-modern, but it has character and a strong sense of history.
+We stayed in Zona Rosa, a central neighborhood full of restaurants, cafés and nightlife, and very LGBTQ-friendly. It felt safe and walkable, and there was always something going on. Our hotel was Hotel Genève, which opened in 1907. It’s not ultra-modern, but the walls are covered with old photos and memorabilia and it has a lot of character.
 
 ![Stian and Markus in front of Teotihuacán](/assets/images/blog/ed68fd6f-9566-46fd-8867-0ffb308bd7cb.webp)
 

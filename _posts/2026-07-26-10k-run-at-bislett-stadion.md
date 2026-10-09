@@ -4,7 +4,7 @@ title: "10k Run at Bislett Stadion"
 date: 2026-07-26T16:00 +0000
 slug: 10k-run-at-bislett-stadion
 tags: [running, oslo]
-description: "Ten laps around Bislett Stadion for a strong 10K in 56:42, finishing with a push in the final stretch right in the neighborhood."
+description: "A steady 10K around the track at Bislett Stadion in 56:42, with enough left in the tank to push the pace at the end."
 ---
 ![on the track](/assets/images/blog/img_1207.jpeg)
 
