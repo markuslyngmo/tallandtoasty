@@ -11,7 +11,7 @@ I used to hate walking into a sauna and feeling awful after 3 minutes. I honestl
 
 I started to feel the health benefits during and after the sessions. I also remember one time, this was at Salt Sauna, where I had just finished a ritual and I got in the cold plunge and got a euphoric feeling that I had never felt before. I have seen and heard of drug experiences, and I could almost imagine it felt like that. Ever since then I have been chasing the same feeling like a drug addict.
 
-![sauna](https://bear-images.sfo2.cdn.digitaloceanspaces.com/tallandtoasty/img_3673.webp)
+![sauna](/assets/images/blog/img_3673.webp)
 
 Saunas have kinda put Oslo on the map or maybe Oslo has become more popular because of its saunas, is there actually a difference? Tourists that have been to Oslo highly recommend it and all the visit Oslo blogs now mention it as a highlight. Those blogs do mention a couple of options but I have not checked out any of the top lists so this is my list that is not influenced or been paid for. Let's list the different sauna options in Oslo in alphabetical order:
 

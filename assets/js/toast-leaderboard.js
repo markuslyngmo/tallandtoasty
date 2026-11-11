@@ -11,7 +11,9 @@
 
   Promise.all(
     posts.map(function (post) {
-      return fetch("https://abacus.jasoncameron.dev/get/" + namespace + "/" + post.slug)
+      // Same ASCII folding as post.js, so both pages ask for the same counter key.
+      var counterKey = post.slug.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^A-Za-z0-9_.-]/g, "-");
+      return fetch("https://abacus.jasoncameron.dev/get/" + namespace + "/" + counterKey)
         .then(function (r) { return r.json(); })
         .then(function (data) { return { post: post, count: data.value || 0 }; })
         .catch(function () { return { post: post, count: 0 }; });

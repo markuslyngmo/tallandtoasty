@@ -31,7 +31,7 @@ Parts of the site load content from other services. These are not things I contr
 - **Google Fonts**, on every page, for the site's typeface
 - **GoatCounter**, on every page, for the visitor statistics described above
 - **Strava** activity embeds on some blog posts ([Strava's privacy policy](https://www.strava.com/legal/privacy))
-- A small anonymous hit counter for the "Toast this post" button, fetched on posts and on the blog page ([abacus.jasoncameron.dev](https://github.com/JasonRCameron/abacus))
+- A small anonymous hit counter for the "Toast this post" button, fetched on posts and on the blog page ([abacus.jasoncameron.dev](https://github.com/JasonLovesDoggo/abacus))
 - **OpenStreetMap** map tiles and the Leaflet map library (from unpkg.com), on the [Run Map](/map/)
 - **YouTube**, on the [Videos](/videos/) page: the thumbnails are fetched from YouTube's image servers when the page loads, and the video player itself (from youtube-nocookie.com) only loads after you click play
 

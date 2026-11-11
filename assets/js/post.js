@@ -23,6 +23,9 @@
   if (btn) {
     var slug = btn.getAttribute("data-slug");
     var namespace = "tallandtoasty";
+    // The counter service only accepts A-Z, a-z, 0-9, "_", "-" and "." in a key,
+    // so a slug like "…-in-the-café" has to be folded to plain ASCII first.
+    var counterKey = slug.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^A-Za-z0-9_.-]/g, "-");
     var toastedKey = "tt-toast-" + slug;
     var toasted = localStorage.getItem(toastedKey) === "1";
     var count = null;
@@ -35,7 +38,7 @@
     }
     paint();
 
-    fetch("https://abacus.jasoncameron.dev/get/" + namespace + "/" + slug)
+    fetch("https://abacus.jasoncameron.dev/get/" + namespace + "/" + counterKey)
       .then(function (r) { return r.json(); })
       .then(function (data) {
         count = data.value || 0;
@@ -50,7 +53,7 @@
       paint();
       burstConfetti(btn);
 
-      fetch("https://abacus.jasoncameron.dev/hit/" + namespace + "/" + slug)
+      fetch("https://abacus.jasoncameron.dev/hit/" + namespace + "/" + counterKey)
         .then(function (r) { return r.json(); })
         .then(function (data) {
           count = data.value;
