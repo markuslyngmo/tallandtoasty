@@ -79,24 +79,7 @@
     });
   }
 
-  /* ---------- Giraffe-spot cursor trail ---------- */
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!reduceMotion && !("ontouchstart" in window)) {
-    var lastSpot = 0;
-    document.addEventListener("mousemove", function (e) {
-      var now = Date.now();
-      if (now - lastSpot < 90) return;
-      lastSpot = now;
-      var spot = document.createElement("span");
-      spot.className = "spot-trail";
-      spot.textContent = "🟫";
-      spot.style.left = e.clientX + (Math.random() * 10 - 5) + "px";
-      spot.style.top = e.clientY + (Math.random() * 10 - 5) + "px";
-      spot.style.fontSize = 8 + Math.random() * 6 + "px";
-      document.body.appendChild(spot);
-      setTimeout(function () { spot.remove(); }, 900);
-    });
-  }
 
   /* ---------- Ambient wandering giraffe (rare, decorative) ---------- */
   if (!reduceMotion && Math.random() < 0.35) {
