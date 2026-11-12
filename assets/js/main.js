@@ -37,6 +37,21 @@
     });
   }
 
+  /* ---------- Dropdown menu: close on outside click or Escape ---------- */
+  var siteMenu = document.querySelector(".site-menu");
+  if (siteMenu) {
+    document.addEventListener("click", function (e) {
+      if (siteMenu.open && !siteMenu.contains(e.target)) siteMenu.open = false;
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && siteMenu.open) {
+        siteMenu.open = false;
+        siteMenu.querySelector("summary").focus();
+      }
+    });
+    siteMenu.addEventListener("toggle", function () { playSound(siteMenu.open ? "toggle-on" : "toggle-off"); });
+  }
+
   /* ---------- Wrap tables for horizontal scroll on narrow screens ---------- */
   document.querySelectorAll(".page-frame table, main table").forEach(function (table) {
     if (table.parentElement.classList.contains("table-scroll")) return;

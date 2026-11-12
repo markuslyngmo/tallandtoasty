@@ -12,6 +12,18 @@
       <button class="search-toggle" type="button" aria-label="Search" data-search-open>🔍<span class="search-toggle-hint">/</span></button>
       <button class="sound-toggle" type="button" aria-label="Toggle click sound">🔊</button>
       <button class="theme-toggle" type="button" aria-label="Toggle dark mode">☀️ Day</button>
+      <details class="site-menu">
+        <summary aria-label="Menu">☰<span class="site-menu-label">Menu</span></summary>
+        <ul class="site-menu-list">
+          <li><a href="{{ '/blog/' | relative_url }}">📝 Blog</a></li>
+          <li><a href="{{ '/map/' | relative_url }}">🧭 Run Map</a></li>
+          <li><a href="{{ '/now/' | relative_url }}">📍 Now</a></li>
+          <li><a href="{{ '/training-plan/' | relative_url }}">🏋️ Training Plan</a></li>
+          <li><a href="{{ '/my-gear-list/' | relative_url }}">🎒 Gear List</a></li>
+          <li><a href="{{ '/my-oslo-guide/' | relative_url }}">🗺️ My Oslo Guide</a></li>
+          <li><a href="{{ '/videos/' | relative_url }}">🎥 Videos</a></li>
+        </ul>
+      </details>
     </div>
   </div>
 </header>
